@@ -1,0 +1,165 @@
+.container-header {
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+  background: url("../img/residential-big.jpg") center no-repeat;
+  background-size: cover;
+  min-width: 100%;
+  min-height: 100%;
+  text-align: center;
+  color: #000; }
+  .container-header-hero--main {
+    /* h1 tag */
+    position: absolute;
+    padding-top: 3rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 5rem;
+    /* glitch does not recognize $bp-medium */ }
+    @media only screen and (max-width: 50em) {
+      .container-header-hero--main {
+        font-size: 4rem; } }
+
+.hero-main {
+  overflow: hidden;
+  display: block;
+  position: relative;
+  text-align: center;
+  width: 15rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6); }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  color: #6d5d4b;
+  font-weight: 300;
+  line-height: 1.6;
+  background-color: #aaa; }
+
+.container {
+  display: grid;
+  /* top to bottom */
+  grid-template-rows: 4rem 90vh min-content 40vw repeat(3, min-content);
+  /* left to right */
+  grid-template-columns: [grid-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [grid-end];
+  /*gap: 1rem 1rem;*/ }
+
+.container-nav {
+  background-color: #f9f7f6;
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  z-index: 100;
+  letter-spacing: 0.4rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+  @media only screen and (max-width: 50em) {
+    .container-nav {
+      /* use when there is no hamburger
+		flex-direction: column;
+		align-items: center;
+		*/ } }
+  .container-nav-sub--left {
+    display: block;
+    font-size: 2rem;
+    transition: 0.3s; }
+    @media only screen and (max-width: 50em) {
+      .container-nav-sub--left {
+        margin-bottom: 1rem;
+        font-size: 1.8rem; } }
+    .container-nav-sub--left > a {
+      text-decoration: none;
+      color: #101d2c;
+      padding: 0 1rem; }
+    .container-nav-sub--left:hover {
+      background: #d1d0d0; }
+  .container-nav-sub--right {
+    display: flex;
+    font-size: 1.2rem; }
+    .container-nav-sub--right > i {
+      display: none; }
+      @media only screen and (max-width: 50em) {
+        .container-nav-sub--right > i {
+          display: block;
+          font-size: 3rem; }
+          .container-nav-sub--right > i:hover {
+            border: solid 2px #000; } }
+    .container-nav-sub--right > a {
+      padding: 0 1rem;
+      margin: 0 1rem;
+      border-radius: 30px;
+      border: solid 1px #000;
+      text-decoration: none;
+      color: #101d2c;
+      transition: 0.3s; }
+      @media only screen and (max-width: 50em) {
+        .container-nav-sub--right > a {
+          /*
+				margin: 3px auto;
+				font-size: 1.8rem;
+				*/
+          display: none; } }
+      .container-nav-sub--right > a:hover {
+        background: #d1d0d0; }
+
+.container-services {
+  grid-column: 1 / -1;
+  grid-row: 3 / 4;
+  min-width: 30%;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  font-size: 1.8rem;
+  color: #c03232;
+  background: #fff; }
+  @media only screen and (max-width: 50em) {
+    .container-services {
+      flex-direction: column; } }
+
+.multi-column-container {
+  padding: 1rem;
+  background: #000;
+  border: solid #fff;
+  box-shadow: 0 3px 5px #000;
+  height: 100%; }
+  .multi-column-container--items {
+    font-size: 1.6rem;
+    color: #02383f;
+    padding: 1rem;
+    background: #4e526b;
+    list-style-type: none; }
+
+/* */
+.container-projects {
+  display: none; }
+
+.container-about {
+  display: none; }
+
+.container-contact {
+  display: none; }
+
+.w3-container {
+  display: none; }

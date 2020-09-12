@@ -1,0 +1,78 @@
+.container-nav {
+	background-color: $color-primary;
+	grid-column: 1 / -1;
+	grid-row: 1 / 2;
+
+	width: 100%;
+	padding: 0.8rem 1rem;
+
+	position: fixed;
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	flex-wrap: wrap;
+	z-index: 100;
+
+	letter-spacing: 0.4rem;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+		0 2px 10px 0 rgba(0, 0, 0, 0.12);
+
+	@media only screen and (max-width: $bp-medium) {
+		/* use when there is no hamburger
+		flex-direction: column;
+		align-items: center;
+		*/
+	}
+
+	&-sub--left {
+		display: block;
+		font-size: 2rem;
+		transition: 0.3s;
+		@media only screen and (max-width: $bp-medium) {
+			margin-bottom: 1rem;
+			font-size: 1.8rem;
+		}
+		& > a {
+			text-decoration: none;
+			color: $color-secondary;
+			padding: 0 1rem;
+		}
+		&:hover {
+			background: $color-grey-light-1;
+		}
+	}
+
+	&-sub--right {
+		display: flex;
+		font-size: 1.2rem;
+		& > i {
+			display: none;
+			@media only screen and(max-width: $bp-medium) {
+				display: block;
+				font-size: 3rem;
+				&:hover {
+					border: solid 2px #000;
+				}
+			}
+		}
+		& > a {
+			padding: 0 1rem;
+			margin: 0 1rem;
+			border-radius: 30px;
+			border: solid 1px #000;
+			text-decoration: none;
+			color: $color-secondary;
+			transition: 0.3s;
+			@media only screen and (max-width: $bp-medium) {
+				/*
+				margin: 3px auto;
+				font-size: 1.8rem;
+				*/
+				display: none;
+			}
+			&:hover {
+				background: $color-grey-light-1;
+			}
+		}
+	}
+}
