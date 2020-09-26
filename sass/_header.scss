@@ -2,27 +2,33 @@
 	grid-column: 1 / -1;
 	grid-row: 2 / 3;
 
-	background: url("../img/residential-big.jpg") center no-repeat;
+	position: fixed;
+
+	background: url("../img/house-1.jpeg") center no-repeat;
 	background-size: cover;
-	min-width: 100%;
-	min-height: 100%;
+
+	width: 100%;
+	height: 100%;
 
 	text-align: center;
 	color: #000;
 
+	z-index: -1;
+
 	&-hero--main {
 		/* h1 tag */
-		position: absolute;
+
 		padding-top: 3rem;
+
+		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		font-size: 5rem;
-		/* glitch does not recognize $bp-medium */
-		@media only screen and (max-width: 50em) {
+
+		@media only screen and (max-width: $bp-medium) {
 			font-size: 4rem;
 		}
 	}
@@ -35,5 +41,13 @@
 	text-align: center;
 	width: 15rem;
 	color: #fff;
+	font-size: 6rem;
 	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hero-sub {
+	color: var(--white);
+	display: inline-block;
+	font-size: 4rem;
+	letter-spacing: 1.75rem;
 }

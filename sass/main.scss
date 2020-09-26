@@ -1,5 +1,10 @@
+@import "base";
+@import "contact";
 @import "header";
 @import "typography";
-@import "base";
 @import "navbar";
-@import "services";
+@import "gallery";
+@import "projects";
+@import "card";
+
+@import "abstracts/mixin";

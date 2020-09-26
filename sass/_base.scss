@@ -1,4 +1,56 @@
 // COLOR VARIABLES
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,600");
+:root {
+	--background: rgba(255, 255, 255, 0.85);
+	--black: #000;
+	--orange: #f26722;
+	--yellow: #f5e608;
+	--white: #fff;
+	--blackRGBA: rgba(0, 0, 0, 0.61);
+	--gradientWhite: linear-gradient(
+		0deg,
+		rgb(211, 211, 211) 0%,
+		rgb(255, 255, 255) 100%
+	);
+
+	--gradientBlack: linear-gradient(0deg,rgba(82, 82, 82, 1))
+	/* radius */
+	--smRad: 3px;
+	--mdRad: 5px;
+	--lgRad: 7px;
+
+	// sizes
+	--bpLargest: 75em; // 1200px
+	--bpLarge: 62.5em; // 1000px
+	--bpMedium: 50em; // 800px;
+	--bpSmallest: 37.5em; // 600px;
+}
+	// COLORS
+	$color-primary: #55c57a;
+	// $color-primary-light: #7ed56f;
+	// $color-primary-dark: #28b485;
+	
+	$color-primary-light: rgb(0, 0, 0);
+	$color-primary-dark:  rgb(39, 52, 99);
+	
+	$color-secondary-light: rgb(0, 0, 0);
+	$color-secondary-dark: rgb(39, 52, 99);
+	
+	// $color-tertiary-light: #2998ff;
+	// $color-tertiary-light: #2998ff;
+
+	$color-tertiary-light: rgb(0, 0, 0);
+	$color-tertiary-dark:  rgb(39, 52, 99);
+	
+	$color-grey-light-1: #f7f7f7;
+	$color-grey-light-2: #eee;
+	
+	$color-grey-dark: #777;
+	$color-grey-dark-2: #999;
+	$color-grey-dark-3: #333;
+	$color-white: #fff;
+	$color-black: #000;
+
 $color-primary: #f9f7f6;
 $color-primary-dark: #09568a;
 
@@ -10,11 +62,14 @@ $color-grey-light-2: #aaa;
 $color-grey-dark-1: #54483a;
 $color-grey-dark-2: #6d5d4b;
 
-$sm-rad: 0.3px;
+$sm-rad: 3px;
 
 // FONT VARIABLES
-$font-primary: "Nunito", sans-serif;
+$font-primary: "Lato", sans-serif;
 $font-display: "Josefin Sans", sans-serif;
+
+// FONT
+$default-font-size: 1.6rem;
 
 // RESPONSIVE BREAKPOINTS
 $bp-largest: 75em; // 1200px
@@ -27,6 +82,7 @@ $bp-small: 37.5em; // 600px;
 *::after {
 	margin: 0;
 	padding: 0;
+	// box-sizing: inherit;
 	box-sizing: inherit;
 }
 
@@ -40,7 +96,7 @@ html {
 }
 
 body {
-	font-family: $font-display;
+	font-family: $font-primary;
 	color: $color-grey-dark-2;
 	font-weight: 300;
 	line-height: 1.6;
@@ -51,10 +107,7 @@ body {
 .container {
 	display: grid;
 	/* top to bottom */
-	grid-template-rows: 4rem 90vh min-content 40vw repeat(
-			3,
-			min-content
-		);
+	grid-template-rows: 4rem 100vh repeat(5, min-content);
 	/* left to right */
 	grid-template-columns:
 		[grid-start] minmax(6rem, 1fr) [center-start] repeat(
