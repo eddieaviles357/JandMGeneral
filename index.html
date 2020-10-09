@@ -52,13 +52,13 @@
 				class="nav-toggle"
 			/>
 			<nav class="nav">
-				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#services">Services</a></li>
-					<li><a href="#gallery">Gallery</a></li>
-					<li><a href="#contact">Contact</a></li>
-					<li><a href="#about">About</a></li>
-					<li><a href="#testimonial">Testimonial</a></li>
+				<ul class="nav__list">
+					<li class="nav__list--item"><a href="#">Home</a></li>
+					<li class="nav__list--item"><a href="#services">Services</a></li>
+					<li class="nav__list--item"><a href="#gallery">Gallery</a></li>
+					<li class="nav__list--item"><a href="#contact">Contact</a></li>
+					<li class="nav__list--item"><a href="#about">About</a></li>
+					<li class="nav__list--item"><a href="#testimonial">Testimonial</a></li>
 				</ul>
 			</nav>
 			<label for="nav-toggle" class="nav-toggle-label">
@@ -67,7 +67,7 @@
 		</header>
 
 		<!-- style="max-width: 1500px"  Header -->
-		<header class="container-header" id="home">
+		<header class="container-header" id="home" alt="image-head">
 			<div class="container-header-hero">
 				<h1 class="container-header-hero--main">
 					<span class="hero-main"><b>J&M</b></span>
@@ -76,8 +76,48 @@
 			</div>
 		</header>
 
+
+		<!-- type writer effect -->
+		<div class="typewriter__container">
+			<h1 class="typewriter--header1">J & M 
+				<span class="txt-type" data-wait="3000" data-words='["General Contractors", "Great Service"]'></span>
+			</h1>
+			<h2 class="typewirter--header2">Contact Us For a Quote</h2>
+			<button class="typewriter--button button">Contact Us</button>
+		</div>
+
+		<!-- header slides -->
+
+		<div class="slider">
+			<div class="slide current">
+				<div class="content">
+					<h1>Beautiful Elegant</h1>
+					<p>McFarland is one of our Remodels</p>
+				</div>
+			</div>
+			<div class="slide">
+				<div class="content">
+					<h1>Slide 2</h1>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, qui. In illo sapiente fugit ipsa?</p>
+				</div>
+			</div>
+			<div class="slide">
+				<div class="content">
+					<h1>Slide 3</h1>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, qui. In illo sapiente fugit ipsa?</p>
+				</div>
+			</div>
+		</div>
+		<div class="buttons">
+			<button id="prev" class="leftButton"><i class="fas fa-chevron-left"></i></button>
+			<button id="next" class="rightButton "><i class="fas fa-chevron-right"></i></button>
+		</div>
+		
 		<!-- Service cards -->
 
+		<div class="service__header" id="services">
+			<h2>Services</h2>
+		</div>
 		<section class="card-container">
 			<div class="card">
 				<div class="card__side card__side--front">
@@ -93,7 +133,9 @@
 					<div class="card__details">
 						<ul>
 							<li>Whole Home Remodels</li>
-							<li>Bathroom/Kitchen Remodel or Upgrade</li>
+							<li>
+								Bathroom/Kitchen Remodel or Upgrade
+							</li>
 							<li>Stucco Repair</li>
 							<li>Exterior Gates/Fencing</li>
 							<li>Flooring Installation</li>
@@ -101,221 +143,158 @@
 							<li>Demolition</li>
 							<li>Interior & Exterior Painting</li>
 						</ul>
-					</div>
+						<!-- </div>
+					<div class="card__side card__side--bottom card__side--bottom-3">
+						<div class="card__cta">
+							<a href="#services" class="btn btn--white">About</a>
+						</div>
+					</div> -->
+					<!-- </div> -->
 				</div>
-			</div>
 
-			<!-- Seconds card -->
-			<div class="card">
-				<div class="card__side card__side--front">
-					<div class="card__picture card__picture--2">
-						&nbsp;
-					</div>
-					<h4 class="card__heading">
-						<span
-							class="card__heading-span card__heading-span--2"
-							>Commercial Construction Services</span
+				<!-- Seconds card -->
+				<div class="card">
+					<div class="card__side card__side--front">
+						<div class="card__picture card__picture--2">
+							&nbsp;
+						</div>
+						<h4 class="card__heading">
+							<span
+								class="card__heading-span card__heading-span--2"
+								>Commercial Construction
+								Services</span
+							>
+						</h4>
+						<div class="card__details">
+							<ul>
+								<li>
+									Restroom remodeling, upgrades &
+									additions
+								</li>
+								<li>Interior & Exterior Painting</li>
+								<li>
+									Interior & Exterior Lighting &
+									Electrical
+								</li>
+								<li>Framing & Drywall</li>
+								<li>Move In/Out Renovations</li>
+								<li>Tenant Improvements</li>
+								<li>Office Additions</li>
+								<li>Flooring Installation</li>
+								<li>Demolition</li>
+							</ul>
+						</div>
+						<!-- <div
+							class="card__side card__side--bottom card__side--bottom-3"
 						>
-					</h4>
-					<div class="card__details">
-						<ul>
-							<li>Restroom remodeling, upgrades & additions</li>
-							<li>Interior & Exterior Painting</li>
-							<li>Interior & Exterior Lighting & Electrical</li>
-							<li>Framing & Drywall</li>
-							<li>Move In/Out Renovations</li>
-							<li>Tenant Improvements</li>
-							<li>Office Additions</li>
-							<li>Flooring Installation</li>
-							<li>Demolition</li>
-						</ul>
+							<div class="card__cta"><a
+									href="#services"
+									class="btn btn--white">About</a>
+							</div>
+						</div> -->
 					</div>
 				</div>
-				
-			</div>
 
-			<!-- 3rd card -->
-			<div class="card">
-				<div class="card__side card__side--upper">
-					<div class="card__picture card__picture--3">
-						&nbsp;
-					</div>
-					<h4 class="card__heading">
-						<span class="card__heading-span card__heading-span--3">Commercial & Residential Electrical Services</span>
-					</h4>
-					<div class="card__details">
-						<ul>
-							<li>Electrical Panel Upgrades & Installations
-
-								3 phase (Commercial/Industrial)
-								2 phase (Residential)</li>
-							<li>Outlet/Switch Installation/Replacement</li>
-							<li>Complete Rewiring</li>
-							<li>Electrical Troubleshooting & Repair</li>
-							<li>Interior Lighting/Ceiling Fan Installations</li>
-							<li>Exterior & Security Lighting Installation/Replacements</li>
-							<li>LED Lighting Upgrades</li>
-							<li>Electrical Demolition</li>
-							<li>Load Center Maintenance/ Repair</li>
-							<li>Transformer Installation</li>
-							<li>Electrical Timers/Photocell Installation</li>
-							<li>Appliance Installation</li>
-						</ul>
-					</div>
-
-				</div>
-				<div class="card__side card__side--bottom card__side--bottom-3">
-					<div class="card__cta">
-						<a href="#popup" class="btn btn--white">About</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		</section>
-		<!-- Page content -->
-		<!--
-			
-			
-			
-			<div class="commercial-contruction-container">
-				<img
-				src="img/McFarland-Night-View.jpg"
-					alt="Commercial-image"
-					class="commercial-contruction-img"
-				/>
-				<section class="commercial-contruction--main">
-					<div class="image__section">
-						image
-						<img
-							src="
-						"
-							alt=""
-						/>
-						<img src="" alt="" />
-						<img src="" alt="" />
-					</div>
-					<h2 class="multi-item--header">
-						<strong>Commercial Remodeling Specialist</strong>
-						<br />
-						<strong>Serving OC for over 20 years</strong>
-					</h2>
-					<div class="list">
-						<ul class="multi-column-container--items__left">
-							<li>
-								<i class="fas fa-check"></i>Restroom
-								remodeling, upgrades & additions
-							</li>
-							<li>
-								<i class="fas fa-check"></i>Interior &
-								Exterior Painting
-							</li>
-							<li>
-								<i class="fas fa-check"></i>Interior &
-								Exterior Lighting & Electrical
-							</li>
-							<li>
-								<i class="fas fa-check"></i>Framing &
-								Drywall
-							</li>
-						</ul>
-						<ul class="multi-column-container--items__right">
-							<li>
-								<i class="fas fa-check"></i>Demolition
-							</li>
-							<li>
-								<i class="fas fa-check"></i>Move In/Out
-								Renovations
-							</li>
-							<li>
-								<i class="fas fa-check"></i>Tenant
-								Improvements
-							</li>
-							<li>
-								<i class="fas fa-check"></i>Office
-								Additions
-							</li>
-							<li>
-								<i class="fas fa-check"></i>Flooring
-								Installation
-							</li>
-						</ul>
-					</div>
-				</section>
-			</div>
-			
-			<div class="container-services" id="services">
-				<div class="multi-column-container">
-					<section>
-						<h2 class="multi-item--header">
-							<strong
-								>Residential Construction Services</strong
-							>
-						</h2>
-						<ul class="multi-column-container--items">
-							<li>Whole Home Remodels</li>
-							<li>Bathroom/Kitchen Remodel or Upgrade</li>
-							<li>Stucco Repair</li>
-							<li>Exterior Gates/Fencing</li>
-	
-							<li>Flooring Installation</li>
-							<li>Countertop/Tile Installation</li>
-							<li>Demolition</li>
-							<li>Interior & Exterior Painting</li>
-						</ul>
-					</section>
-				</div>
-	
-				<div class="multi-column-container">
-					<section>
-						<h2 class="multi-item--header">
-							<strong
+				<!-- 3rd card -->
+				<div class="card">
+					<div class="card__side card__side--upper">
+						<div class="card__picture card__picture--3">
+							&nbsp;
+						</div>
+						<h4 class="card__heading">
+							<span
+								class="card__heading-span card__heading-span--3"
 								>Commercial & Residential Electrical
-								Services</strong
+								Services</span
 							>
-						</h2>
-						<ul class="multi-column-container--items">
-							<li>
-								Electrical Panel Upgrades & Installations
-								<ul>
-									3 phase (Commercial/Industrial)
-								</ul>
-								<ul>
-									2 phase (Residential)
-								</ul>
-							</li>
-							<li>
-								Outlet/Switch Installation/Replacement
-							</li>
-							<li>Complete Rewiring</li>
-							<li>Electrical Troubleshooting & Repair</li>
-							<li>
-								Interior Lighting/Ceiling Fan
-								Installations
-							</li>
-							<li>
-								Exterior & Security Lighting
-								Installation/Replacements
-							</li>
-						</ul>
-						<ul class="multi-column-container--items">
-							<li>LED Lighting Upgrades</li>
-							<li>Electrical Demolition</li>
-							<li>Load Center Maintenance/ Repair</li>
-							<li>Transformer Installation</li>
-							<li>
-								Electrical Timers/Photocell Installation
-							</li>
-							<li>Appliance Installation</li>
-						</ul>
-					</section>
+						</h4>
+						<div class="card__details">
+							<ul>
+								<li>
+									Electrical Panel Upgrades &
+									Installations 3 phase
+									(Commercial/Industrial) 2 phase
+									(Residential)
+								</li>
+								<li>
+									Outlet/Switch
+									Installation/Replacement
+								</li>
+								<li>Complete Rewiring</li>
+								<li>
+									Electrical Troubleshooting &
+									Repair
+								</li>
+								<li>
+									Interior Lighting/Ceiling Fan
+									Installations
+								</li>
+								<li>
+									Exterior & Security Lighting
+									Installation/Replacements
+								</li>
+								<li>LED Lighting Upgrades</li>
+								<li>Electrical Demolition</li>
+								<li>
+									Load Center Maintenance/ Repair
+								</li>
+								<li>Transformer Installation</li>
+								<li>
+									Electrical Timers/Photocell
+									Installation
+								</li>
+								<li>Appliance Installation</li>
+							</ul>
+						</div>
+					</div>
+					<div
+						class="card__side card__side--bottom card__side--bottom-3"
+					>
+						<div class="card__cta">
+							<a href="#services" class="btn btn--white"
+								>About</a
+							>
+						</div>
+					</div>
 				</div>
 			</div>
-		-->
+		</section>
+		
+		<!-- Gallery -->     
+		<div class="gallery__header" id="gallery">
+			<h2 class="gallery__header--title">
+				Gallery
+			</h2>
+		</div>   
+		<div class="gallery__wrapper">
 
-		<!-- Gallery -->
-		<!-- <div class="main-gallery">
-			<div class="gallery-image--container">GALLERY</div>
-		</div> -->
+			<section class="gallery">
+				<figure class="gallery__item gallery__item--1"><img src="img/gal-1.jpeg" alt="Gallery image 1" class="gallery__img"></figure>
+				<figure class="gallery__item gallery__item--2"><img src="img/gal-2.jpeg" alt="Gallery image 2" class="gallery__img"></figure>
+				<figure class="gallery__item gallery__item--3"><img src="img/gal-3.jpeg" alt="Gallery image 3" class="gallery__img"></figure>
+				<figure class="gallery__item gallery__item--4"><img src="img/gal-4.jpeg" alt="Gallery image 4" class="gallery__img"></figure>
+				<figure class="gallery__item gallery__item--5"><img src="img/gal-5.jpeg" alt="Gallery image 5" class="gallery__img"></figure>
+				<figure class="gallery__item gallery__item--6"><img src="img/gal-6.jpeg" alt="Gallery image 6" class="gallery__img"></figure>
+				<figure class="gallery__item gallery__item--7"><img src="img/gal-7.jpeg" alt="Gallery image 7" class="gallery__img"></figure>
+				<figure class="gallery__item gallery__item--8"><img src="img/gal-8.jpeg" alt="Gallery image 8" class="gallery__img"></figure>
+				<figure class="gallery__item gallery__item--9"><img src="img/gal-9.jpeg" alt="Gallery image 9" class="gallery__img"></figure>
+				<figure class="gallery__item gallery__item--10"><img src="img/gal-10.jpeg" alt="Gallery image 10" class="gallery__img"></figure>
+				<figure class="gallery__item gallery__item--11"><img src="img/gal-11.jpeg" alt="Gallery image 11" class="gallery__img"></figure>
+				<figure class="gallery__item gallery__item--12"><img src="img/gal-12.jpeg" alt="Gallery image 12" class="gallery__img"></figure>
+				<figure class="gallery__item gallery__item--13"><img src="img/gal-13.jpeg" alt="Gallery image 13" class="gallery__img"></figure>
+				<figure class="gallery__item gallery__item--14"><img src="img/gal-14.jpeg" alt="Gallery image 14" class="gallery__img"></figure>
+	
+	
+			</section>
+		</div>
+
+		<!-- The Modal -->
+	<div id="myModal" class="modal">
+		<span class="close">&times;</span>
+		<img class="modal-content" id="img01">
+		<div id="caption"></div>
+		<div class="left">h</div>
+	</div>
 
 		<!-- projects -->
 		<!-- <div class="container-projects"> -->
@@ -326,33 +305,53 @@
 				</h3>
 			</div>
 		</div> -->
-		<!--	About Section -->
-		<!-- <div class="container-about" id="about">
-			<h3
-				class="w3-border-bottom w3-border-light-grey w3-padding-16"
-			>
-				About
-			</h3>
-			<p>
-				J&M General Contractors. Inc is a fully licensed and
-				bonded General and Electrical Contractor based in
-				Orange County, CA. At J&M we aim to win the customer,
-				not the job. For 20 years Mike Zellmer, owner of J&M
-				General Contractors, Inc., has built long lasting
-				relationships with his customers achieved by
-				establishing and maintaining mutual trust and respect
-				between the company and the client. Our competitive
-				advantage, and greatest asset, is our people. Every
-				one of J&M's employees, from the office staff to our
-				team of field technicians, as well as all of our many
-				trusted vendors, are highly knowledgeable, trained
-				professionals who consistently exceed expectations by
-				going above and beyond their scope of work to meet the
-				customer needs, reflecting their sincere care for and
-				loyalty to our customers. Contractors<br />
-				<strong>License # 1002460</strong>
-			</p>
-		</div> -->
+
+		<!-- Contact -->
+		<div class="contact__header" id="contact">
+			<h2>Contact</h2>
+		</div>
+		<section class="contact__container">
+			<div class="contact__container--wrapper">
+
+			</div>
+		</section>
+
+		<!-- Testimonial -->
+		<div class="testimonial__header" id="testimonial">
+			<h2>Testimonial</h2>
+		</div>
+		<section class="testimonial__container">
+			<div class="testimonial__container--wrapper"></div>
+		</section>
+
+		<!--	About us Section -->
+		<div class="about__header" id="about">
+			<h2>About Us</h2>
+		</div>
+		<section class="about__container">
+			<div class="about__container--wrapper">
+
+				<p class="about__container--para">
+					J&M General Contractors. Inc is a fully licensed and
+					bonded General and Electrical Contractor based in
+					Orange County, CA. At J&M we aim to win the customer,
+					not the job. For 20 years Mike Zellmer, owner of J&M
+					General Contractors, Inc., has built long lasting
+					relationships with his customers achieved by
+					establishing and maintaining mutual trust and respect
+					between the company and the client. Our competitive
+					advantage, and greatest asset, is our people. Every
+					one of J&M's employees, from the office staff to our
+					team of field technicians, as well as all of our many
+					trusted vendors, are highly knowledgeable, trained
+					professionals who consistently exceed expectations by
+					going above and beyond their scope of work to meet the
+					customer needs, reflecting their sincere care for and
+					loyalty to our customers. Contractors<br />
+				</p>
+				<strong class="licence__info">License # 1002460</strong>
+			</div>
+		</section>
 
 		<!-- Contact Section -->
 
@@ -378,5 +377,11 @@
 				<i class="fab fa-twitter-square"></i>
 			</div>
 		</footer> -->
+
+
+		<script src="src/scripts.js"></script>
+		<script src="src/slider.js"></script>
+		<script src="src/typewriter.js"></script>
+
 	</body>
 </html>

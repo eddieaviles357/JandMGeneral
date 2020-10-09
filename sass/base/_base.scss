@@ -1,12 +1,14 @@
 // COLOR VARIABLES
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:300,600");
 :root {
-	--background: rgba(255, 255, 255, 0.85);
+	// --background: rgba(255, 255, 255, 0.85);
+	--background: rgba(255, 255, 255, 1);
 	--black: #000;
 	--orange: #f26722;
 	--yellow: #f5e608;
 	--white: #fff;
 	--blackRGBA: rgba(0, 0, 0, 0.61);
+	--whiteRGBA: rgba(255,255,255, 0.8);
 	--gradientWhite: linear-gradient(
 		0deg,
 		rgb(211, 211, 211) 0%,
@@ -25,31 +27,32 @@
 	--bpMedium: 50em; // 800px;
 	--bpSmallest: 37.5em; // 600px;
 }
-	// COLORS
-	$color-primary: #55c57a;
-	// $color-primary-light: #7ed56f;
-	// $color-primary-dark: #28b485;
-	
-	$color-primary-light: rgb(0, 0, 0);
-	$color-primary-dark:  rgb(39, 52, 99);
-	
-	$color-secondary-light: rgb(0, 0, 0);
-	$color-secondary-dark: rgb(39, 52, 99);
-	
-	// $color-tertiary-light: #2998ff;
-	// $color-tertiary-light: #2998ff;
+// COLORS
+$color-primary: #55c57a;
+// $color-primary-light: #7ed56f;
+// $color-primary-dark: #28b485;
 
-	$color-tertiary-light: rgb(0, 0, 0);
-	$color-tertiary-dark:  rgb(39, 52, 99);
-	
-	$color-grey-light-1: #f7f7f7;
-	$color-grey-light-2: #eee;
-	
-	$color-grey-dark: #777;
-	$color-grey-dark-2: #999;
-	$color-grey-dark-3: #333;
-	$color-white: #fff;
-	$color-black: #000;
+$color-primary-light: rgba(0, 0, 0, 0.9);
+$color-primary-dark: rgba(39, 52, 99, 0.9);
+
+$color-secondary-light: rgba(0, 0, 0, 0.9);
+$color-secondary-dark: rgba(39, 52, 99, 0.9);
+
+// $color-tertiary-light: #2998ff;
+// $color-tertiary-light: #2998ff;
+
+$color-tertiary-light:rgba(0, 0, 0, 0.9);
+$color-tertiary-dark: rgba(39, 52, 99, 0.9);
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+
+$color-grey-dark: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
+
+$color-white: #fff;
+$color-black: #000;
 
 $color-primary: #f9f7f6;
 $color-primary-dark: #09568a;
@@ -107,7 +110,7 @@ body {
 .container {
 	display: grid;
 	/* top to bottom */
-	grid-template-rows: 4rem 100vh repeat(5, min-content);
+	grid-template-rows: min-content 100vh repeat(10, min-content);
 	/* left to right */
 	grid-template-columns:
 		[grid-start] minmax(6rem, 1fr) [center-start] repeat(
@@ -116,4 +119,9 @@ body {
 		)
 		[center-end] minmax(6rem, 1fr) [grid-end];
 	/*gap: 1rem 1rem;*/
+}
+
+::selection {
+    background-color: $color-secondary-dark;
+    color: $color-white;
 }

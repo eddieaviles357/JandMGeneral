@@ -1,11 +1,146 @@
-.main-gallery {
-	// grid-column: 1 / -1;
-	// grid-row: 4 / 5;
+.gallery__header {
+	grid-column: 1 / -1;
+	grid-row: 5 / 6;
+	width: 100%;
+	padding: 6rem;
 
-	display: none;
-	// z-index: 3;
-	// background: #939;
-	// color: black;
-	// height: 60rem;
-	// width: 100%;
+	letter-spacing: 1rem;
+	color: white;
+
+	// background-color: var(--blackRGBA);
+	background-image: linear-gradient(
+		to right bottom,
+		$color-secondary-light,
+		$color-secondary-dark
+	);
+	& h2 {
+		&:before {
+			content: "";
+			width: 3px;
+			height: 100%;
+			border: solid 3px yellow;
+			background-color: yellow;
+			margin-right: 3rem;
+		}
+		&:after {
+			content: "";
+			width: 3px;
+			height: 100%;
+			border: solid 3px yellow;
+			background-color: yellow;
+			margin-left: 3rem;
+		}
+	}
+}
+
+.gallery__wrapper {
+	background-color: $color-white;
+	grid-column: 1 / -1;
+	grid-row: 6 / 7;
+
+	width: 100%;
+	padding: 6rem;
+	// padding: 0 5rem 0 5rem;
+}
+
+.gallery {
+	position: relative;
+	margin: 0 auto;
+	height: auto;
+	width: 100%;
+
+	display: grid;
+	/*grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(7, 5vw);*/
+	grid-template: repeat(7, 5vw) / repeat(8, 1fr);
+
+	grid-gap: 1.5rem;
+	padding: 1.5rem;
+
+	box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+	&__item {
+		&--1 {
+			grid-row: 1 / span 2;
+			grid-column: 1 / span 2;
+		}
+
+		&--2 {
+			grid-row: 1 / span 3;
+			grid-column: 3 / span 3;
+		}
+
+		&--3 {
+			grid-row: 1 / span 2;
+			grid-column: 6 / 7;
+		}
+
+		&--4 {
+			grid-row: 1 / span 2;
+			grid-column: 7 / -1;
+		}
+
+		&--5 {
+			grid-row: 3 / span 3;
+			grid-column: 1 / span 2;
+		}
+
+		&--6 {
+			grid-row: 4 / span 2;
+			grid-column: 3 / span 2;
+		}
+
+		&--7 {
+			grid-row: 4 / 5;
+			grid-column: 5 / 6;
+		}
+
+		&--8 {
+			grid-row: 3 / span 2;
+			grid-column: 6 / span 2;
+		}
+
+		&--9 {
+			grid-row: 3 / span 3;
+			grid-column: 8 / -1;
+		}
+
+		&--10 {
+			grid-row: 6 / span 2;
+			grid-column: 1 / 2;
+		}
+
+		&--11 {
+			grid-row: 6 / span 2;
+			grid-column: 2 / span 2;
+		}
+
+		&--12 {
+			grid-row: 6 / span 2;
+			grid-column: 4 / 5;
+		}
+
+		&--13 {
+			grid-row: 5 / span 3;
+			grid-column: 5 / span 3;
+		}
+
+		&--14 {
+			grid-row: 6 / span 2;
+			grid-column: 8 / -1;
+		}
+	}
+
+	&__img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+
+		transition: opacity 0.35s;
+		&:hover {
+			opacity: 0.5;
+			cursor: pointer;
+		}
+	}
 }

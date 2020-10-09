@@ -1,0 +1,98 @@
+.slider {
+	grid-column: 1 / -1;
+	grid-row: 2 / 3;
+
+	position: relative;
+	overflow: hidden;
+	height: 100vh;
+	width: auto;
+}
+
+// where image is shown
+.slide {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 0.4s ease-in-out;
+	&.current {
+		opacity: 1;
+	}
+
+	// & .content {
+	// 	position: absolute;
+	// 	bottom: 7rem;
+	// 	left: -60rem;
+	// 	opacity: 0;
+	// 	width: 60rem;
+	// 	background-color: rgba(255, 255, 255, 0.8);
+	// 	color: #333;
+	// 	padding: 3.5rem;
+	// 	opacity: 1;
+	// 	transform: translateX(60rem);
+	// 	transition: all 0.7s ease-in-out 0.3s;
+
+	// 	& h1 {
+	// 		margin-bottom: 1rem;
+	// 	}
+	// }
+}
+
+.buttons button#next {
+	position: absolute;
+	top: 50%;
+	right: 1.5rem;
+}
+
+.buttons button#prev {
+	position: absolute;
+	top: 50%;
+	left: 1.5rem;
+}
+
+.buttons button {
+	border: 0.2rem solid #fff;
+	background-color: var(--blackRGBA);
+
+	font-size: 2rem;
+	color: #fff;
+	cursor: pointer;
+
+	padding: 2.3rem;
+	border-radius: 0.3rem;
+	outline: none;
+}
+
+.buttons button:hover {
+	background-color: #fff;
+	color: #333;
+}
+
+@media (max-width: 500px) {
+	.slide .content {
+		bottom: -30rem;
+		left: 0;
+		width: 100%;
+	}
+
+	.slide.current .content {
+		transform: translateY(-30rem);
+	}
+}
+
+/* Backgorund Images */
+
+.slide:first-child {
+	background: url("..//..//img/McFarland Final.png") no-repeat
+		center center/cover;
+}
+.slide:nth-child(2) {
+	background: url("..//..//img/Laguna Woods.jpg") no-repeat center
+		center/cover;
+}
+.slide:nth-child(3) {
+	background: url("..//..//img/gal-9.jpeg") no-repeat center
+		center/cover;
+}

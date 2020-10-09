@@ -1,13 +1,10 @@
-/* new */
-/* navigation styles start here */
-
 .header {
 	grid-column: 1 / -1;
 	grid-row: 1 / 2;
 
 	position: fixed;
 
-	height: 10vh;
+	min-height: 7rem;
 	width: 100%;
 
 	background: var(--background);
@@ -16,7 +13,7 @@
 
 	text-align: center;
 
-	z-index: 999;
+	z-index: 9;
 }
 
 /* makes it tabbable */
@@ -64,7 +61,7 @@
 	top: 7px;
 }
 
-nav {
+.nav {
 	position: absolute;
 	text-align: left;
 	top: 100%;
@@ -74,15 +71,16 @@ nav {
 	transform: scale(1, 0);
 	transform-origin: top;
 	transition: transform 400ms ease-in-out;
-	& ul {
+	&__list {
 		margin: 0;
 		padding: 0;
 		list-style: none;
-	}
-	& li {
-		margin-bottom: 1em;
-		margin-left: 1em;
-		width: 100%;
+		font-weight: 700;
+		&--item {
+			margin-bottom: 1em;
+			margin-left: 1em;
+			width: 100%;
+		}
 	}
 	& a {
 		color: var(--black);
@@ -92,6 +90,7 @@ nav {
 		opacity: 0;
 		// padding: 0.8rem;
 		border-radius: var(--smRad);
+
 		&:before {
 			content: "";
 			// border-left: solid 3px orange;
@@ -99,6 +98,7 @@ nav {
 			padding-right: 0.5rem;
 		}
 		&:hover {
+			padding: 0.6rem 1.5rem 0.6rem 0.2rem;
 			background: rgba(78, 78, 78, 0.2);
 		}
 		&:active {
@@ -179,6 +179,7 @@ nav {
 				transform: scale(1, 1);
 			}
 			&:hover {
+				padding: 0;
 				background: none;
 			}
 			&:active {

@@ -1,28 +1,69 @@
+// Service header
+.service__header {
+	grid-column: 1 / -1;
+	grid-row: 3 / 4;
+	width: 100%;
+	padding: 6rem;
+
+	letter-spacing: 1rem;
+	color: white;
+
+	// background-color: var(--blackRGBA);
+	background-image: linear-gradient(
+		to right bottom,
+		$color-secondary-light,
+		$color-secondary-dark
+	);
+	& h2 {
+		&:before {
+			content: "";
+			width: 3px;
+			height: 100%;
+			border: solid 3px yellow;
+			background-color: yellow;
+			margin-right: 3rem;
+		}
+		&:after {
+			content: "";
+			width: 3px;
+			height: 100%;
+			border: solid 3px yellow;
+			background-color: yellow;
+			margin-left: 3rem;
+		}
+	}
+} // end of Service Header
+
 .card-container {
 	grid-column: 1 / -1;
 	grid-row: 4 / 5;
-	background-color: $color-white;
-	overflow: hidden;
+
+	position: relative;
+	height: auto;
 
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: center;
 	align-items: center;
-	padding: 15rem 0 15rem 0;
+
+	background-color: $color-white;
+	overflow: hidden;
+
+	padding: 5rem 0 5rem 0;
 	color: black;
 }
 
 .card {
 	// FUNCTIONALITY
 	position: relative;
-	height: 52rem;
+	height: auto;
 	width: 90%;
+	// width: 100%;
 
 	&__side {
-		height: 52rem;
-		position: absolute;
-		top: 0;
-		left: 0;
+		height: auto;
+		// position: absolute;
+		position: relative;
 		width: 100%;
 		border-radius: 3px;
 		overflow: hidden;
@@ -57,6 +98,7 @@
 					$color-tertiary-light,
 					$color-tertiary-dark
 				);
+				margin: -2rem 0 0 0;
 			}
 		}
 	}
@@ -65,6 +107,7 @@
 	&__picture {
 		background-size: cover;
 		height: 23rem;
+		width: 100%;
 		background-blend-mode: screen;
 		-webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 		clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
@@ -119,12 +162,6 @@
 		box-decoration-break: clone;
 
 		&--1 {
-			// border: solid 4px #f7f7f7;
-			// border-radius: 6px;
-
-			// font-size: 38px;
-			// color: $color-white;
-			// text-shadow: -1px 2px 2px #9e9e9e;
 			background-image: linear-gradient(
 				to right bottom,
 				rgba($color-secondary-light, 0.85),
@@ -151,7 +188,6 @@
 
 	&__details {
 		padding: 3rem;
-
 		ul {
 			list-style: none;
 			width: 80%;
@@ -170,16 +206,24 @@
 	}
 
 	// UPPER SIDE STYLING
+	// &__cta {
+	// 	position: absolute;
+	// 	top: 50%;
+	// 	left: 50%;
+	// 	transform: translate(-50%, -50%);
+	// 	width: 90%;
+	// 	text-align: center;
+	// 	& a {
+	// 		color: $color-white;
+	// 	}
+	// }
 	&__cta {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		width: 90%;
-		text-align: center;
-		& a {
-			color: $color-white;
-		}
+		position: relative;
+		top: 0%;
+		left: 0;
+		transform: translate(0);
+		width: auto;
+		padding: 7rem 4rem 4rem 4rem;
 	}
 
 	//@include respond(tab-port) {
@@ -195,9 +239,9 @@
 			box-shadow: none;
 		}
 
-		&__details {
-			padding: 1rem 3rem;
-		}
+		// &__details {
+		// 	padding: 1rem 3rem;
+		// }
 
 		// UPPEr SIDE STYLING
 		&__cta {
