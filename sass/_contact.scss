@@ -1,36 +1,6 @@
 .contact__header {
 	grid-column: 1 / -1;
 	grid-row: 7 / 8;
-	width: 100%;
-	padding: 6rem;
-
-	letter-spacing: 1rem;
-	color: white;
-
-	// background-color: var(--blackRGBA);
-	background-image: linear-gradient(
-		to right bottom,
-		$color-secondary-light,
-		$color-secondary-dark
-	);
-	& h2 {
-		&:before {
-			content: "";
-			width: 3px;
-			height: 100%;
-			border: solid 3px yellow;
-			background-color: yellow;
-			margin-right: 3rem;
-		}
-		&:after {
-			content: "";
-			width: 3px;
-			height: 100%;
-			border: solid 3px yellow;
-			background-color: yellow;
-			margin-left: 3rem;
-		}
-	}
 }
 
 .contact__container {
@@ -40,20 +10,127 @@
 	// height: auto;
 	height: 100vh;
 	width: 100%;
+
 	padding: 6rem;
 
 	background: $color-white;
-	&--wrapper {
+	@media only screen and (max-width: $bp-large) {
+		padding: 10rem 0;
+	}
+
+	&--img {
+		background: rgba(9, 9, 9, 0.8);
+	}
+	& .contact--wrapper {
 		position: relative;
 		box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 
-		width: 100%;
-		height: 100%;
+		// width: 100%;
+		// height: 100%;
+
+		width: 50%;
+		padding: 6rem;
 
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 
-		justify-content: flex-end;
-		background: blueviolet;
+		justify-content: space-between;
+
+		background-image: linear-gradient(
+				105deg,
+				rgba(235, 232, 228, 0.884) 0%,
+				rgba(202, 202, 202, 0.87) 50%
+			),
+			url("../img/residential_small.jpg");
+		height: 100%;
+		background-origin: top;
+		background-size: cover;
+		background-repeat: no-repeat;
+		border-radius: 3px;
+		box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+
+		@media only screen and(max-width: $bp-medium) {
+			width: 100%;
+		}
+	}
+
+	// right side of form
+	.contact__info {
+		width: 56%;
+		clip-path: polygon(21% 0, 110% 0, 100% 100%, 0% 100%);
+		background: rgba(0, 0, 0, 0.8);
+
+		color: white;
+		font-size: 4rem;
+
+		padding-right: 9rem;
+		text-align: right;
+	}
+
+	// __COMMENT_AREA__
+	& textarea {
+		max-width: 33vw;
+		min-width: 33vw;
+
+		max-height: 35vh;
+		min-height: 35vh;
+
+		@media only screen and(max-width: $bp-medium) {
+			max-width: 80vw;
+			min-width: 80vw;
+		}
+	}
+}
+
+.form {
+	&__input {
+		display: block;
+		width: 33vw;
+
+		font-size: 1.5rem;
+		font-family: inherit;
+		color: inherit;
+
+		padding: 1.5rem 2rem;
+
+		border-radius: 2px;
+		background-color: rgba($color-white, 0.5);
+		border: none;
+		border-bottom: 3px solid transparent;
+
+		transition: all 0.3s;
+
+		@media only screen and(max-width: $bp-medium) {
+			width: 80vw;
+		}
+
+		&:focus {
+			outline: none;
+			box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+			border-bottom: 3px solid $color-primary;
+		}
+
+		&:focus:invalid {
+			border-bottom: 3px solid $color-secondary-dark;
+		}
+
+		&::-webkit-input-placeholder {
+			color: $color-grey-dark-2;
+		}
+	}
+
+	&__label {
+		font-size: 1.2rem;
+		font-weight: 700;
+		margin-left: 2rem;
+		margin-top: 0.7rem;
+		display: block;
+		transition: all 0.3s;
+	}
+
+	&__input:placeholder-shown + &__label {
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-4rem);
 	}
 }

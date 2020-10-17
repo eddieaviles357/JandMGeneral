@@ -2,36 +2,7 @@
 .service__header {
 	grid-column: 1 / -1;
 	grid-row: 3 / 4;
-	width: 100%;
-	padding: 6rem;
-
-	letter-spacing: 1rem;
 	color: white;
-
-	// background-color: var(--blackRGBA);
-	background-image: linear-gradient(
-		to right bottom,
-		$color-secondary-light,
-		$color-secondary-dark
-	);
-	& h2 {
-		&:before {
-			content: "";
-			width: 3px;
-			height: 100%;
-			border: solid 3px yellow;
-			background-color: yellow;
-			margin-right: 3rem;
-		}
-		&:after {
-			content: "";
-			width: 3px;
-			height: 100%;
-			border: solid 3px yellow;
-			background-color: yellow;
-			margin-left: 3rem;
-		}
-	}
 } // end of Service Header
 
 .card-container {
@@ -40,16 +11,17 @@
 
 	position: relative;
 	height: auto;
+	width: 100%;
 
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	// justify-content: space-around;
 	align-items: center;
 
 	background-color: $color-white;
-	overflow: hidden;
+	// overflow: hidden;
 
-	padding: 5rem 0 5rem 0;
+	padding: 5rem 0;
 	color: black;
 }
 
@@ -58,7 +30,6 @@
 	position: relative;
 	height: auto;
 	width: 90%;
-	// width: 100%;
 
 	&__side {
 		height: auto;

@@ -1,21 +1,3 @@
-const service = document.querySelector(".service__header");
-
-const options = {
-	root: null, // viewport
-	threshold: 0,
-	rootMargin: "-100px",
-};
-
-const observer = new IntersectionObserver(function (
-	entries,
-	observer
-) {
-	if (entries[0].isIntersecting) {
-		onIntersected = true;
-		console.log("intersecting");
-	}
-},
-options);
 
 // Get the modal
 var modal = document.getElementById("myModal");

@@ -1,32 +1,6 @@
 .about__header {
 	grid-column: 1 / -1;
 	grid-row: 11 / 12;
-	width: 100%;
-	padding: 6rem;
-
-	letter-spacing: 1rem;
-	color: white;
-
-	// background-color: var(--blackRGBA);
-	background: $color-secondary-dark;
-	& h2 {
-		&:before {
-			content: "";
-			width: 3px;
-			height: 100%;
-			border: solid 3px yellow;
-			background-color: yellow;
-			margin-right: 3rem;
-		}
-		&:after {
-			content: "";
-			width: 3px;
-			height: 100%;
-			border: solid 3px yellow;
-			background-color: yellow;
-			margin-left: 3rem;
-		}
-	}
 }
 
 .about__container {

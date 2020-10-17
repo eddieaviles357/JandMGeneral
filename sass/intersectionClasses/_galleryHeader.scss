@@ -1,0 +1,25 @@
+.title {
+	transition: all 1s;
+	opacity: 0;
+	//experimental
+	// font-size: 5rem;
+	// letter-spacing: 2rem;
+	// color: white;
+	// padding: 4rem;
+	// background-image: linear-gradient(
+	// 	to right bottom,
+	// 	$color-secondary-light,
+	// 	$color-secondary-dark
+	// );
+	// box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+	//experimental end
+
+	transform: translateX(-80rem);
+}
+
+// used to add to title's
+.interGallHeader {
+	opacity: 1;
+
+	transform: translateX(0);
+}
