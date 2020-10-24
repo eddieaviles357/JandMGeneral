@@ -1,5 +1,5 @@
 .header__style {
-	width: 100vw;
+	width: 100%;
 	padding: 6rem 0 6rem 0;
 
 	letter-spacing: 1rem;
@@ -12,22 +12,22 @@
 		$color-secondary-dark
 	);
 	box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
-	& h2 {
-		&:before {
-			content: "";
-			width: 3px;
-			height: 100%;
-			border: solid 3px yellow;
-			background-color: yellow;
-			margin-right: 3rem;
-		}
-		&:after {
-			content: "";
-			width: 3px;
-			height: 100%;
-			border: solid 3px yellow;
-			background-color: yellow;
-			margin-left: 3rem;
-		}
-	}
+	// & h2 {
+	// 	&:before {
+	// 		content: "";
+	// 		width: 3px;
+	// 		height: 100%;
+	// 		border: solid 3px yellow;
+	// 		background-color: yellow;
+	// 		margin-right: 3rem;
+	// 	}
+	// 	&:after {
+	// 		content: "";
+	// 		width: 3px;
+	// 		height: 100%;
+	// 		border: solid 3px yellow;
+	// 		background-color: yellow;
+	// 		margin-left: 3rem;
+	// 	}
+	// }
 }

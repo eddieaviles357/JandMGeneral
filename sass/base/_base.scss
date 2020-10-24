@@ -1,9 +1,10 @@
 // COLOR VARIABLES
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:300,600");
 :root {
-	// --background: rgba(255, 255, 255, 0.85);
-	--background: rgba(255, 255, 255, 1);
-	--black: #000;
+	--background: rgb(255, 255, 255);
+	// --background: rgba(255, 255, 255, 0.5);
+	--backgroundFooter: rgb(9, 9, 9);
+	--black: #000; 
 	--orange: #f26722;
 	--yellow: #f5e608;
 	--white: #fff;
@@ -68,7 +69,8 @@ $color-grey-dark-2: #6d5d4b;
 $sm-rad: 3px;
 
 // FONT VARIABLES
-$font-primary: "Lato", sans-serif;
+$font-primary: "Lora", serif;;
+// $font-primary: "Lato", sans-serif;
 $font-display: "Josefin Sans", sans-serif;
 
 // FONT
@@ -78,7 +80,7 @@ $default-font-size: 1.6rem;
 $bp-largest: 75em; // 1200px
 $bp-large: 62.5em; // 1000px
 $bp-medium: 50em; // 800px;
-$bp-small: 37.5em; // 600px;
+$bp-small: 37.5em; // 600px; 
 
 *,
 *::before,
@@ -100,7 +102,7 @@ html {
 
 body {
 	font-family: $font-primary;
-	color: $color-grey-dark-2;
+	color: var(--black);
 	font-weight: 300;
 	line-height: 1.6;
 

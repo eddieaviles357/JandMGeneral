@@ -1,59 +1,80 @@
 .testimonial__header {
 	grid-column: 1 / -1;
-	grid-row: 9 / 10;
-	width: 100%;
-	padding: 6rem;
-
-	letter-spacing: 1rem;
-	color: white;
-
-	// background-color: var(--blackRGBA);
-	background-image: linear-gradient(
-		to right bottom,
-		$color-secondary-light,
-		$color-secondary-dark
-	);
-	& h2 {
-		&:before {
-			content: "";
-			width: 3px;
-			height: 100%;
-			border: solid 3px yellow;
-			background-color: yellow;
-			margin-right: 3rem;
-		}
-		&:after {
-			content: "";
-			width: 3px;
-			height: 100%;
-			border: solid 3px yellow;
-			background-color: yellow;
-			margin-left: 3rem;
-		}
-	}
+	grid-row: 7 / 8;
 }
 
 .testimonial__container {
 	grid-column: 1 / -1;
-	grid-row: 10 / 11;
+	grid-row: 8 / 9;
 
-	// height: auto;
-	height: 100vh;
+	height: auto;
 	width: 100%;
 	padding: 6rem;
 
 	background: $color-white;
+
 	&--wrapper {
 		position: relative;
 		box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 
-		width: 100%;
+		width: auto;
 		height: 100%;
+		padding: 2rem 1.5rem 2rem 1.5rem;
 
 		display: flex;
 		flex-direction: column;
+		justify-content: space-between;
 
-		justify-content: flex-end;
-		background: pink;
+		font-size: 2rem;
+		text-overflow: auto;
+	}
+}
+
+.review {
+	text-align: center;
+	padding: 1rem;
+
+	// give the border a line except last child
+	&:not(:last-child) {
+		border-bottom: 1px solid black;
+	}
+	&:not(:first-child) {
+		padding-top: 2.7rem;
+	}
+	&__user {
+		&--box {
+		}
+		&--name {
+			font-size: 2.4rem;
+		}
+	}
+}
+.review__para {
+	overflow: visible;
+	width: 100%;
+	position: relative;
+
+	padding: 1rem;
+
+	z-index: 1;
+	&::before {
+		content: "\201C";
+		color: rgba(133, 133, 133, 0.4);
+		position: absolute;
+		top: 5rem;
+		left: -1rem;
+		line-height: 0;
+		font-size: 15rem;
+		z-index: 0;
+	}
+	&::after {
+		content: "\201e";
+		color: rgba(133, 133, 133, 0.4);
+		position: absolute;
+		top: -3rem;
+		right: 0;
+		line-height: 0;
+		font-size: 15rem;
+		z-index: 0;
 	}
 }

@@ -13,7 +13,6 @@ function callBackFunc(entries, observer) {
         entries.forEach(entry => {
             if(entry.isIntersecting) {
                 entry.target.classList.add("interGallHeader")
-                console.log(entry.target)
             }
             // entry.target.classList.toggle("interGallHeader")
         })
