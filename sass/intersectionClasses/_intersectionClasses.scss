@@ -1,0 +1,22 @@
+.title {
+	transition: all 1s;
+	opacity: 0;
+
+	transform: translateX(-50rem);
+}
+
+// used to add to title's
+.interGallHeader {
+	opacity: 1;
+
+	transform: translateX(0);
+}
+
+// used for navigation background
+
+.interNav {
+	transition: all 0.5s;
+	color: var(--yellow) !important;
+	box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
+	background: rgba(219, 30, 30, 0) !important;
+}

@@ -27,24 +27,6 @@
 
 	<body class="container">
 		<!-- Navbar (sit on top) -->
-		<!--
-		<nav class="container-nav">
-			<div class="container-nav-sub--left">
-				<a href="#home" class="container-nav-sub--left logo">
-					<b>J&M</b>&nbsp General Contractors
-				</a>
-			</div>
-			
-			<div class="container-nav-sub--right">
-				<div class="hamburger">
-					<i class="fas fa-bars"></i>
-				</div>
-				<a href="#projects" class="link"> Gallery </a>
-				<a href="#about" class="link"> About </a>
-				<a href="#contact" class="link"> Contact </a>
-				<a href="#services" class="link"> Services </a>
-				<a href="#contact" class="link"> Testimonial </a>
-			</div> -->
 		<header class="header">
 			<h1 class="logo">J&M</h1>
 			<input
@@ -57,9 +39,9 @@
 					<li class="nav__list--item"><a href="#">Home</a></li>
 					<li class="nav__list--item"><a href="#services">Services</a></li>
 					<li class="nav__list--item"><a href="#gallery">Gallery</a></li>
-					<li class="nav__list--item"><a href="#contact">Contact</a></li>
 					<li class="nav__list--item"><a href="#about">About</a></li>
 					<li class="nav__list--item"><a href="#testimonial">Testimonial</a></li>
+					<li class="nav__list--item"><a href="#contact">Contact</a></li>
 				</ul>
 			</nav>
 			<label for="nav-toggle" class="nav-toggle-label">
@@ -76,8 +58,8 @@
 				</h1>
 			</div>
 		</header>
-
-
+		
+		
 		<!-- type writer effect -->
 		<div class="typewriter__container">
 			<h1 class="typewriter--header1">J & M <br>Great
@@ -86,9 +68,8 @@
 			<h2 class="typewirter--header2">Contact Us For a Quote</h2>
 		</div>
 		<!-- <button class="typewriter--button button">Contact Us</button> -->
-
+		
 		<!-- header slides -->
-
 		<div class="slider">
 			<div class="slide current">
 				<div class="content">
@@ -109,10 +90,10 @@
 				</div>
 			</div>
 		</div>
-		<div class="buttons">
+		<!-- <div class="buttons">
 			<button id="prev" class="leftButton"><i class="fas fa-chevron-left"></i></button>
 			<button id="next" class="rightButton "><i class="fas fa-chevron-right"></i></button>
-		</div>
+		</div> -->
 		
 		<!-- Service cards -->
 
@@ -146,26 +127,33 @@
 							<li>Demolition</li>
 							<li>Interior & Exterior Painting</li>
 						</ul>
-						<!-- </div>
-					<div class="card__side card__side--bottom card__side--bottom-3">
+					</div>
+					<div
+						class="card__side card__side--bottom 
+									 card__side--bottom-3">
 						<div class="card__cta">
-							<a href="#services" class="btn btn--white">About</a>
+							<a 
+							href="#contact" 
+							class="btn btn--white">
+							Contact us
+							</a>
 						</div>
-					</div> -->
-					<!-- </div> -->
+					</div>
 				</div>
-
+			</div>
 				<!-- Seconds card -->
-					<div class="card__side card__side--front">
-						<div class="card__picture card__picture--2">
-							&nbsp;
-						</div>
+			<div class="card">
+				<div class="card__side card__side--front">
+					<div class="card__picture card__picture--2">
+						&nbsp;
+					</div>
 						<h4 class="card__heading">
 							<span
-								class="card__heading-span card__heading-span--2"
-								>Commercial Construction
-								Services</span
-							>
+							class="card__heading-span card__heading-span--2"
+							>Commercial Construction
+							Services
+							</span
+						>
 						</h4>
 						<div class="card__details">
 							<ul>
@@ -186,17 +174,21 @@
 								<li>Demolition</li>
 							</ul>
 						</div>
-						<!-- <div
-							class="card__side card__side--bottom card__side--bottom-3"
-						>
-							<div class="card__cta"><a
-									href="#services"
-									class="btn btn--white">About</a>
-							</div>
-						</div> -->
 					</div>
-
+				<div
+					class="card__side card__side--bottom 
+								 card__side--bottom-3">
+					<div class="card__cta">
+						<a 
+						href="#contact" 
+						class="btn btn--white">
+						Contact us
+						</a>
+					</div>
+				</div>
+			</div>
 				<!-- 3rd card -->
+				<div class="card">
 					<div class="card__side card__side--upper">
 						<div class="card__picture card__picture--3">
 							&nbsp;
@@ -248,15 +240,17 @@
 						</div>
 					</div>
 					<div
-						class="card__side card__side--bottom card__side--bottom-3"
-					>
+						class="card__side card__side--bottom 
+									 card__side--bottom-3">
 						<div class="card__cta">
-							<a href="#services" class="btn btn--white"
-								>About</a
-							>
+							<a 
+							href="#contact" 
+							class="btn btn--white">
+							Contact us
+							</a>
 						</div>
 					</div>
-			</div>
+				</div>
 		</section>
 		
 		<!-- Gallery -->     
@@ -405,54 +399,61 @@
 		</section>
 		<!-- About us Section End -->
 
-		
-		<!-- Contact -->
-		<div class="contact__header header__style" id="contact">
-			<!-- intersection observer -->
-			<h2 class="title">Contact</h2>
-			<!-- intersection observer end -->
-		</div>
-		<section class="contact__container">
-			<div class="contact__container--img">
-
-				<div class="contact--wrapper">
-					<form action="#" method="get" class="form">
-						<div class="form__group">
-						<input class="form__input" type="text" name="name" id="name" placeholder="Name" required>
-						<label class="form__label" for="name">Name </label>
-					</div>
-					<div class="form__group">
-						<input type="email" class="form__input" placeholder="Email address" id="email" required>
-						<label for="email" class="form__label">Email address</label>
-					</div>
-					<textarea name="comment" id="comments" autocomplete="off" cols="30" rows="10" placeholder="Comment"></textarea>
-					<div class="form__group">
-						<button class="form__button">
-							Submit
-						</div>
-					</form>
-					
-					<!-- <section class="contact__info">
-						Phone Number: 
-						<br>949-259-4848
-					</section> -->
-				</div>
-			</div>
-		</section>
-		<!-- Contact End -->
-
 		<!-- Image of location/map -->
+
 		<!-- End page content -->
 
 		<!-- Footer -->
-		
-		<footer class="footer">
-			<div class="footer--info">
-				Thank you for taking the time to contact us! To request your free estimate, please use the form below to give us some details about your project.
-			</div>
-			<section class="footer__form">
+		<footer class="footer" id="contact">
+			<!-- Footer Information -->
+			<h3 class="footer__header">
+				Contact Us
+				<hr>
+			</h3>
+			<section class="footer__info">
+				<div class="footer__info--address">
+					J & M General Contractors 
+					<br>
+					Fullerton, CA 
+					License # 1002460
+				</div>
+				<div class="footer__info--phone">
+					Call us: 866-755-4001 
+				</div>
+				<br>
+				<p>
+					OR
+					<br>
+					<br>
+					to reach
+				</p>
+				<br>
+				<br>
+				<div class="footer__info--sub-contact">
+					Nancy Montellano/Office Manager: 714-323-0649
+					<br>
+					Katrina Shuper/Administration: 714-872-7224
+				</div>
+				<br>
+				<br>
+				<br>
+				<div class="footer__info--email">
+					Email us:SERVICE@JMGCINC.COM
+				</div>
+			</section>
+			<!-- End of Footer Information -->
 
-				<form action="#" method="get" class="form">
+			<!-- Form -->
+			<section class="footer__form">
+				<p>
+					Thank you for taking the time to contact us!
+					
+					To request your free estimate, please use the 
+					form below to give us some 
+					
+					details about your project.
+				</p>
+				<form class="form" action="#" method="GET">
 					<div class="form__group">
 						<input class="form__input" type="text" name="name" id="name" placeholder="Name" required>
 						<label class="form__label" for="name">Name </label>
@@ -468,30 +469,40 @@
 					</div>
 				</form>
 			</section>
-			<div class="footer--social">
-				<p>Powered by
-					<a
-					href="#"
-					title="Eduardo-Aviles"
-					target="_blank">Eduardo Aviles
-					</a>
-				</p>
-				<div class="social--icons">
-					<a target="_blank"
-					href="https://facebook.com/pages/category/Contractor/JM-General-Contractors-Inc-103544624395607/" class="fab fa-facebook-square"></i>
-					<i class="fab fa-instagram-square"></i>
-					<i class="fab fa-yelp"></i>
-					<i class="fab fa-twitter-square"></i>
-				</div>
-			</div>
-			</footer>
-			
-		<!-- Footer End -->
+			<!-- End of Form-->
 
+			<!-- Social Info -->
+			<section class="footer__social">
+				<div class="footer__social--icons">
+				<a class="footer__social--icon" 
+					target="_blank" 
+					href="https://facebook.com/pages/category/Contractor/JM-General-Contractors-Inc-103544624395607/">
+					<i class="fab fa-facebook-square"></i>
+				</a>
+				<i class="fab fa-instagram-square"></i>
+				<i class="fab fa-yelp"></i>
+				<i class="fab fa-twitter-square"></i>
+			</div>
+			<!-- <div class="social--powered">
+				Powered by
+				<a
+				href="#"
+				title="Eduardo-Aviles"
+				target="_blank">Eduardo Aviles
+				</a>
+			</div> -->
+			</section>
+			<!-- End of Social Info -->
+		</footer>
+		<!-- End of Footer -->
+
+		<!-- Scripts -->
 		<script src="src/scripts.js"></script>
 		<script src="src/slider.js"></script>
 		<script src="src/typewriter.js"></script>
 		<script src="src/intersectionObservers/titleObserver.js"></script>
+		<script src="src/intersectionObservers/navObserver.js"></script>
+		<!-- End of Scripts -->
 
 	</body>
 </html>

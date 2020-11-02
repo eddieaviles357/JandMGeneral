@@ -3,10 +3,13 @@
 :root {
 	--background: rgb(255, 255, 255);
 	// --background: rgba(255, 255, 255, 0.5);
-	--backgroundFooter: rgb(9, 9, 9);
+	--backgroundFooter: #1e1e1e;
+	--footerFontColor: #7b7b7b;
 	--black: #000; 
 	--orange: #f26722;
 	--yellow: #f5e608;
+	--danger: #ff0000;
+	--passed: #31e63a;
 	--white: #fff;
 	--blackRGBA: rgba(0, 0, 0, 0.61);
 	--whiteRGBA: rgba(255,255,255, 0.8);
@@ -29,9 +32,7 @@
 	--bpSmallest: 37.5em; // 600px;
 }
 // COLORS
-$color-primary: #55c57a;
-// $color-primary-light: #7ed56f;
-// $color-primary-dark: #28b485;
+$color-primary: #ffaa2b;
 
 $color-primary-light: rgba(0, 0, 0, 0.9);
 $color-primary-dark: rgba(39, 52, 99, 0.9);
@@ -45,18 +46,15 @@ $color-secondary-dark: rgba(39, 52, 99, 0.9);
 $color-tertiary-light:rgba(0, 0, 0, 0.9);
 $color-tertiary-dark: rgba(39, 52, 99, 0.9);
 
-$color-grey-light-1: #f7f7f7;
 $color-grey-light-2: #eee;
 
 $color-grey-dark: #777;
-$color-grey-dark-2: #999;
 $color-grey-dark-3: #333;
 
 $color-white: #fff;
 $color-black: #000;
 
-$color-primary: #f9f7f6;
-$color-primary-dark: #09568a;
+// $color-primary: #f9f7f6;
 
 $color-secondary: #101d2c;
 

@@ -1,15 +1,15 @@
 const title = document.querySelectorAll(".title");
-// console.log(service)
-const options = {
+
+const titleOptions = {
 	root: null, // viewport
 	threshold: 0,
-	rootMargin: "0px",
+	rootMargin: "0px"
 };
 
-const observer = 
-    new IntersectionObserver(callBackFunc, options);
+const titleObserver = 
+    new IntersectionObserver(titleObsCb, titleOptions);
 
-function callBackFunc(entries, observer) {
+function titleObsCb(entries, observer) {
         entries.forEach(entry => {
             if(entry.isIntersecting) {
                 entry.target.classList.add("interGallHeader")
@@ -19,6 +19,6 @@ function callBackFunc(entries, observer) {
     };
 
 // observe all the title nodes
-title.forEach(serv => {
-    observer.observe(serv)
+title.forEach(title => {
+    titleObserver.observe(title)
 })
