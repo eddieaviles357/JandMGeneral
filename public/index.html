@@ -21,12 +21,8 @@
 	<body class="container">
 		<!-- Navbar (sit on top) -->
 		<header class="header">
-			<h1 class="logo">J&M</h1>
-			<input
-				type="checkbox"
-				id="nav-toggle"
-				class="nav-toggle"
-			/>
+			<h1 class="logo"><img class="logo-img" src="./img/images/Logo.jpg" alt="Logo"></h1>
+			<input type="checkbox" id="nav-toggle" class="nav-toggle"/>
 			<nav class="nav">
 				<ul class="nav__list">
 					<li class="nav__list--item"><a href="#">Home</a></li>
@@ -46,7 +42,7 @@
 		<header class="container-header" id="home" alt="image-head">
 			<div class="container-header-hero">
 				<h1 class="container-header-hero--main">
-					<span class="hero-main"><b>J&M</b></span>
+					<span class="hero-main"><img class="logo-img" src="./img/images/Logo.jpg" alt="Logo"></span>
 					<span class="hero-sub">General Contractors</span>
 				</h1>
 			</div>
@@ -55,7 +51,7 @@
 		
 		<!-- type writer effect -->
 		<div class="typewriter__container">
-			<h1 class="typewriter--header1">J & M <br>Great
+			<h1 class="typewriter--header1">J<p class="middle">&</p>M <br>Great
 				<span class="txt-type" data-wait="3000" data-words='["Contractors", "Services", "Staff"]'></span>
 			</h1>
 			<h2 class="typewirter--header2">Contact Us For a Quote</h2>
@@ -281,17 +277,6 @@
 		<div id="caption"></div>
 		<!-- <div class="left">h</div> -->
 	</div>
-
-		<!-- projects -->
-		<!-- <div class="container-projects"> -->
-		<!-- Project Section -->
-		<!-- <div class="container-content--projects" id="projects">
-				<h3 class="container-content--projects--header">
-					Projects
-				</h3>
-			</div>
-		</div> -->
-
 		
 		<!-- Testimonial -->
 		<div class="testimonial__header header__style" id="testimonial">
@@ -446,19 +431,20 @@
 					
 					details about your project.
 				</p>
-				<form class="form" action="/contact" method="POST">
+				<form class="form" action="/" method="POST">
 					<div class="form__group">
 						<input class="form__input" type="text" name="name" id="name" placeholder="Name" required>
 						<label class="form__label" for="name">Name </label>
 					</div>
 					<div class="form__group">
-						<input type="email" class="form__input" placeholder="Email address" id="email" required>
+						<input type="email" name="email" class="form__input" placeholder="Email address" id="email" required>
 						<label for="email" class="form__label">Email address</label>
 					</div>
 					<textarea name="comment" id="comments" autocomplete="off" cols="30" rows="10" placeholder="Comment"></textarea>
 					<div class="form__group">
 						<button class="form__button">
 							Submit
+						</button>
 					</div>
 				</form>
 			</section>

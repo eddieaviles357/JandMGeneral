@@ -3,7 +3,7 @@ const dotenv = require("dotenv");
 const path = require("path");
 
 const express = require("express");
-const { json } = require("express");
+// const { json } = require("express");
 const app = express();
 
 // load env variables
@@ -11,20 +11,25 @@ dotenv.config({ path: "./config/config.env" });
 
 // body parser
 app.use(express.json());
-
+app.use(express.urlencoded({
+  extended: true
+}))
 // use static files
-app.use(express.static(path.join(__dirname, "./public")));
+app.use(express.static(__dirname + "/public"));
+console.log(path.basename(__dirname));
 
+app.get('/',function(req,res){
+  res.sendFile("/index.html");
+});
 
-app.get('/', (req, res) => {
-  // res.render("index.html");
-  // res.sendFile()
-  res.end();
-})
-
-app.post('/contact', (req, res) => {
-  res.setHeader("content-type", "application/json").json(req.body);
-  console.log(req.body)
+app.post('/', (req, res) => {
+  const name = req.body.name;
+  const comment = req.body.comment;
+  const email = req.body.email;
+  console.log(`Name: ${name}, Comment: ${comment}, Email: ${email}`);
+  res.send(
+    `<h1>Thanks for submitting</h1><a href="/">Press to go home</a>`)
+  // res.redirect('/#contact');
 })
 
 const PORT = process.env.PORT || 3000;
