@@ -1,9 +1,9 @@
-
 const dotenv = require("dotenv");
 const path = require("path");
 
 const express = require("express");
-// const { json } = require("express");
+const { isEmail, isAlpha } = require('validator'); // to validate user input
+
 const app = express();
 
 // load env variables
@@ -23,13 +23,12 @@ app.get('/',function(req,res){
 });
 
 app.post('/', (req, res) => {
-  const name = req.body.name;
-  const comment = req.body.comment;
-  const email = req.body.email;
+  const { name, email, comment } = req.body;
+  if(isEmail(email) && isAlpha(name, 'en-US'))
+  { console.log('yes')}
+ 
   console.log(`Name: ${name}, Comment: ${comment}, Email: ${email}`);
-  res.send(
-    `<h1>Thanks for submitting</h1><a href="/">Press to go home</a>`)
-  // res.redirect('/#contact');
+  res.redirect(301, '/');
 })
 
 const PORT = process.env.PORT || 3000;
@@ -37,6 +36,8 @@ const PORT = process.env.PORT || 3000;
 // app.listen(PORT, () => {
 //   console.log(`App up in ${process.env.NODE_ENV} listening on port ${PORT}!`);
 // });
+
+
 const server = app.listen(
   PORT, () => 
   console.log(`server up in ${process.env.NODE_ENV} mode on port ${PORT}`)
