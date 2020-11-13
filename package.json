@@ -20,9 +20,13 @@
   "homepage": "https://github.com/eddieaviles357/JandMGeneral#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "validator": "^13.1.17"
   },
   "devDependencies": {
     "nodemon": "^2.0.6"
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.2.1"
   }
 }
