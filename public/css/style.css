@@ -894,6 +894,8 @@ h2 {
       outline: none;
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
       border-bottom: 3px solid var(--yellow); }
+    .form__input:focus:valid {
+      border-bottom: 3px solid green; }
     .form__input:focus:invalid {
       border-bottom: 3px solid var(--danger); }
   .form__label {
@@ -902,15 +904,17 @@ h2 {
     margin-left: 1rem;
     display: block;
     transition: all 0.3s; }
-  .form textarea {
+  .form .form__textarea {
     height: 20rem;
-    margin: 2rem 0;
+    margin-bottom: -0.5rem;
     padding: 1rem;
     letter-spacing: 2px;
     font-family: inherit;
+    resize: none;
     border-radius: 3px;
-    border: 1px solid #ccc;
     box-shadow: 1px 1px 1px #999; }
+    .form .form__textarea:focus {
+      background: #eeeeee; }
   .form__button {
     height: 5rem;
     width: 100%;
@@ -920,3 +924,10 @@ h2 {
       background: var(--yellow); }
     .form__button:active {
       background: var(--passed); }
+
+.submit-thanks {
+  padding-top: 5rem;
+  font-size: 3rem !important; }
+  @media only screen and (max-width: 50em) {
+    .submit-thanks {
+      font-size: 2rem !important; } }

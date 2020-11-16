@@ -220,6 +220,9 @@
 			border-bottom: 3px solid var(--yellow);
 		}
 
+		&:focus:valid {
+			border-bottom: 3px solid green;
+		}
 		&:focus:invalid {
 			border-bottom: 3px solid var(--danger);
 		}
@@ -233,17 +236,22 @@
 		transition: all 0.3s;
 	} // end of form__label
 
-	& textarea {
+	& .form__textarea {
 		height: 20rem;
-		margin: 2rem 0;
+		// width: auto;
+		margin-bottom: -0.5rem;
 		padding: 1rem;
 		letter-spacing: 2px;
 
 		font-family: inherit;
 
+		resize: none;
 		border-radius: 3px;
-		border: 1px solid #ccc;
 		box-shadow: 1px 1px 1px #999;
+
+		&:focus {
+			background: rgb(238, 238, 238);
+		}
 	}
 
 	&__button {
@@ -260,5 +268,13 @@
 		&:active {
 			background: var(--passed);
 		}
+	}
+}
+
+.submit-thanks {
+	padding-top: 5rem;
+	font-size: 3rem !important;
+	@media only screen and(max-width: $bp-medium) {
+		font-size: 2rem !important;
 	}
 }

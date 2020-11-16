@@ -1,0 +1,80 @@
+		<!-- Header -->
+		<!-- Navbar (sit on top) -->
+		<%- include ("header") -%>
+		<!-- End of Header-->
+		<!-- End of Navbar -->
+
+		<!-- style="max-width: 1500px"  Header -->
+		<!-- <header class="container-header" id="home" alt="image-head">
+			<div class="container-header-hero">
+				<h1 class="container-header-hero--main">
+					<span class="hero-main"><img class="logo-img" src="./img/images/Logo.jpg" alt="Logo"></span>
+					<span class="hero-sub">General Contractors</span>
+				</h1>
+			</div>
+		</header> -->
+		
+		
+		<!-- type writer effect -->
+		<%- include("typewriter") -%> 
+		<!-- End of Typewriter -->
+		
+		<!-- header slides -->
+		<%- include("slider") -%> 
+		<!-- End of Slider header -->
+
+		<!-- <div class="buttons">
+			<button id="prev" class="leftButton"><i class="fas fa-chevron-left"></i></button>
+			<button id="next" class="rightButton "><i class="fas fa-chevron-right"></i></button>
+		</div> -->
+		
+		<!-- Service cards -->
+		<%- include("service") -%> 
+		<!-- End of Service cards -->
+		
+		<!-- Gallery -->     
+		<%- include("gallery") -%>
+		<!-- End of Gallery -->
+
+		<!-- The Modal for Gallery -->
+		<%- include("modal") -%> 
+		<!-- End of Modal for Gallery -->
+
+		
+		<!-- Testimonial -->
+		<%- include("testimonial") -%> 
+		<!-- End of Testimonial -->
+		
+		<!--	About us Section -->
+		<%- include("about") -%> 
+		<!-- About us Section End -->
+
+		<!-- Image of location/map -->
+
+		<!-- End page content -->
+
+		<!-- Footer -->
+		<footer class="footer" id="contact">
+		<%- include("footer") -%> 
+			<!-- End of Footer -->
+
+			<!-- Start of Form -->
+			<% if(!submit) { %>
+				<%- include ("form") -%>
+			<% } else { %>
+				<%- include ("submitForm") -%>
+			<% } %>
+			<!-- End of Form-->
+
+			<!-- Social Info -->
+			<%- include("social") -%> 
+			<!-- End of Social Info -->
+		</footer>
+		<!-- End of Footer -->
+
+		<!-- Scripts -->
+		<%- include("scripts") -%> 
+		<!-- End of Scripts -->
+
+	</body>
+</html>
