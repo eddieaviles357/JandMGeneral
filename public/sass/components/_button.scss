@@ -1,0 +1,48 @@
+.btn {
+	display: inline-block;
+	line-height: normal;
+	white-space: nowrap;
+	vertical-align: middle;
+	text-align: center;
+	cursor: pointer;
+	word-spacing: normal;
+}
+
+.btn-generic {
+	width: 50%;
+	margin: 0 auto 0 auto;
+
+	font-family: inherit;
+	font-size: 2rem;
+	padding: 0.5em 1em;
+	color: #444; /* rgba not supported (IE 8) */
+	color: rgba(0, 0, 0, 0.8); /* rgba supported */
+	border: 1px solid #999; /*IE 6/7/8*/
+	border: none rgba(0, 0, 0, 0); /*IE9 + everything else*/
+	// background-color: #e6e6e6;
+	background-image: linear-gradient(
+		var(--orange-linear) 40%,
+		var(--yellow-linear)
+	);
+
+	text-decoration: none;
+	border-radius: 2px;
+
+	&:hover,
+	&:focus {
+		background-image: linear-gradient(
+			var(--orange-linear) 0%,
+			var(--yellow-linear)
+		);
+	}
+
+	&:focus {
+		outline: 0;
+	}
+
+	&:active {
+		box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset,
+			0 0 6px rgba(0, 0, 0, 0.2) inset;
+		border-color: #000;
+	}
+}
