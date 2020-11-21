@@ -37,8 +37,9 @@
 	&:hover,
 	&:focus {
 		background-image: linear-gradient(
-			var(--orange-linear) 0%,
-			var(--yellow-linear)
+			90deg,
+			var(--orange-linear) 20%,
+			var(--yellow-linear) 80%
 		);
 	}
 
