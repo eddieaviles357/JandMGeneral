@@ -4,6 +4,7 @@ const { isEmail, isAlpha, isAlphanumeric } = require("validator"); // Validate u
 const validator = (req, res, next) => {
   // use to remove the form
   let submit = false;
+  let nameLength = 0;
   let commentLength = 0;
 
   // initialize to strings for validation to work
@@ -32,9 +33,14 @@ const validator = (req, res, next) => {
     Comment is: ${isAlpha(comment, "en-US")}`)
   
   // remove whitespace
-  let noWhtSpc = comment.split(" ").join("");
-
-  if( !isEmail(email) || !isAlpha(name, "en-US") || !isAlpha(noWhtSpc) ) { 
+  let noWhtSpcName = comment.split(" ").join("");
+  let noWhtSpcComment = comment.split(" ").join("");
+  
+  if(
+    !isEmail(email) || 
+    !isAlpha(noWhtSpcName, "en-US") || 
+    !isAlpha(noWhtSpcComment, "en-US") 
+    ) { 
     console.log("error");
     res.render("rejected");
   } else {

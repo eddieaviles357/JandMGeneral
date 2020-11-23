@@ -1,15 +1,20 @@
-		<!-- Header -->
+	<!-- Header -->
+	<%- include ("header/header") -%>
+	<!-- End of Header-->
+
+	<!-- Body container starts here -->
+	<body class="container"> 
+
 		<!-- Navbar (sit on top) -->
-		<%- include ("header") -%>
-		<!-- End of Header-->
+		<%- include ("header/nav") -%>
 		<!-- End of Navbar -->
 		
 		<!-- type writer effect -->
-		<%- include("typewriter") -%> 
+		<%- include("header/typewriter") -%> 
 		<!-- End of Typewriter -->
 		
 		<!-- header slides -->
-		<%- include("slider") -%> 
+		<%- include("header/slider") -%> 
 		<!-- End of Slider header -->
 
 		<!-- <div class="buttons">
@@ -18,49 +23,47 @@
 		</div> -->
 		
 		<!-- Service cards -->
-		<%- include("service") -%> 
+		<%- include("body/service") -%> 
 		<!-- End of Service cards -->
 		
 		<!-- Gallery -->     
-		<%- include("gallery") -%>
+		<%- include("body/gallery") -%>
 		<!-- End of Gallery -->
 
 		<!-- The Modal for Gallery -->
-		<%- include("modal") -%> 
+		<%- include("body/modal") -%> 
 		<!-- End of Modal for Gallery -->
 
 		
 		<!-- Testimonial -->
-		<%- include("testimonial") -%> 
+		<%- include("body/testimonial") -%> 
 		<!-- End of Testimonial -->
 		
 		<!--	About us Section -->
-		<%- include("about") -%> 
+		<%- include("body/about") -%> 
 		<!-- About us Section End -->
 		<!-- Image of location/map -->
 		<!-- End page content -->
 
 		<!-- Footer -->
-		<footer class="footer" id="contact">
-			<%- include("footer") -%> 
-			<!-- End of Footer -->
+		<%- include("footer/footer") -%> 
+		<!-- End of Footer -->
 
-			<!-- Start of Form -->
-			<% if(!submit) { %>
-				<%- include ("form") -%>
-			<% } else { %>
-				<%- include ("submitForm") -%>
-			<% } %>
-			<!-- End of Form-->
+		<!-- Start of Form -->
+		<% if(!submit) { %>
+			<%- include ("footer/form") -%>
+		<% } else { %>
+			<%- include ("footer/submitForm") -%>
+		<% } %>
+		<!-- End of Form-->
 
-			<!-- Social Info -->
-			<%- include("social") -%> 
-			<!-- End of Social Info -->
-		</footer>
+		<!-- Social Info -->
+		<%- include("footer/social") -%> 
+		<!-- End of Social Info -->
 		<!-- End of Footer -->
 
 		<!-- Scripts -->
-		<%- include("scripts") -%> 
+		<%- include("partials/scripts") -%> 
 		<!-- End of Scripts -->
 
 	</body>

@@ -21,9 +21,8 @@
 	}
 	@media only screen and(max-width: $bp-small) {
 		font-size: 1.4rem;
-	}
+	} // end of footer
 
-	// end of footer
 	&__header {
 		grid-column: 4 / 7;
 		grid-row: 1 / 2;
@@ -181,7 +180,7 @@
 .form {
 	height: auto;
 	&__group {
-		// background: blue;
+		margin-bottom: 1rem;
 	}
 	&__input {
 		display: block;
@@ -221,7 +220,7 @@
 		}
 
 		&:focus:valid {
-			border-bottom: 3px solid green;
+			border-bottom: 3px solid var(--passed);
 		}
 		&:focus:invalid {
 			border-bottom: 3px solid var(--danger);
@@ -231,7 +230,7 @@
 	&__label {
 		font-size: 1.5rem;
 		font-weight: 700;
-		margin-left: 1rem;
+		margin: 0 0 1rem 1rem;
 		display: block;
 		transition: all 0.3s;
 	} // end of form__label
@@ -251,22 +250,6 @@
 
 		&:focus {
 			background: rgb(238, 238, 238);
-		}
-	}
-
-	&__button {
-		height: 5rem;
-		width: 100%;
-
-		border-radius: 2px;
-		background: grey;
-
-		&:hover {
-			background: var(--yellow);
-		}
-
-		&:active {
-			background: var(--passed);
 		}
 	}
 }

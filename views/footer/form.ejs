@@ -46,6 +46,7 @@
 			placeholder="Comment Max characters 140" 
 			maxlength="140"
 			onfocus="this.value='';"
+			pattern="[A-Z a-z]{140}"
 			class="form__textarea">
 		</textarea>
 		<label 
@@ -54,10 +55,10 @@
 		>
 			Comment
 		</label>
-		<div class="form__group">
-			<button class="form__button">
+		<!-- <div class="form__group"> -->
+			<button class="btn btn-generic">
 				Submit
 			</button>
-		</div>
+		<!-- </div> -->
 	</form>
 </section>
