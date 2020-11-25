@@ -964,9 +964,13 @@ h2 {
     font-family: inherit;
     resize: none;
     border-radius: 3px;
-    box-shadow: 1px 1px 1px #999; }
+    outline-style: none; }
     .form .form__textarea:focus {
       background: #eeeeee; }
+    .form .form__textarea:focus:valid {
+      border-bottom: solid 3px var(--passed); }
+    .form .form__textarea:focus:invalid {
+      border-bottom: solid 3px var(--danger); }
 
 .submit-thanks {
   padding-top: 5rem;

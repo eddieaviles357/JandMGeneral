@@ -246,10 +246,19 @@
 
 		resize: none;
 		border-radius: 3px;
-		box-shadow: 1px 1px 1px #999;
+
+		outline-style: none;
 
 		&:focus {
 			background: rgb(238, 238, 238);
+		}
+
+		&:focus:valid {
+			border-bottom: solid 3px var(--passed);
+		}
+
+		&:focus:invalid {
+			border-bottom: solid 3px var(--danger);
 		}
 	}
 }

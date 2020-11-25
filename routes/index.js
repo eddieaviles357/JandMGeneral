@@ -6,7 +6,9 @@ module.exports =
   router
   .get('/', (req,res) => {
     // used to render form
-    let submit = false;
-    res.render("index", { submit: submit });
+    res.locals.submit = false;
+    res.render("index");
   })
-  .post('/', validator)
+  .post('/', validator, (req, res) => {
+    res.render("index", { submit: req.submit });
+  })
