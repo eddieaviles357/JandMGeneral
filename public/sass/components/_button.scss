@@ -50,3 +50,35 @@
 		border-color: #000;
 	}
 }
+
+.btn-expand {
+	width: 8%;
+	height: 20%;
+	margin: 0 auto 0 auto;
+	font-family: inherit;
+	font-size: 2rem;
+	font-weight: 600;
+	padding: 0.5em 1em;
+
+	color: #444; /* rgba not supported (IE 8) */
+	color: rgba(0, 0, 0, 0.8); /* rgba supported */
+	border: 1px solid rgb(0, 0, 0);
+
+	background: rgb(255, 255, 255);
+
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+	}
+
+	&:focus {
+		outline: 0;
+	}
+
+	&:active {
+		box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset,
+			0 0 6px rgba(0, 0, 0, 0.2) inset;
+		border-color: #000;
+	}
+}

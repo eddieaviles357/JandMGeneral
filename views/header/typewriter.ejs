@@ -8,7 +8,14 @@
   <br>
   <br>
   <br>
-  <h2 class="typewirter--header2">Contact Us For a Quote</h2>
-  <br>
-  <a class="btn btn-generic" href="#contact">Contact</a>
+  <% if(!submit) { %>
+    <h3 class="typewriter--header2">Contact Us!</h3>
+    <br>
+    <a class="btn btn-generic" href="#contact">Contact</a>
+  <% } else { %>
+    <h3>Thanks for submitting!
+      <br>
+      We will contact you shortly
+    </h3>
+  <% } %>
 </div>

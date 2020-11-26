@@ -10,5 +10,9 @@ module.exports =
     res.render("index");
   })
   .post('/', validator, (req, res) => {
-    res.render("index", { submit: req.submit });
+    const submit = res.locals.submit;
+    (submit) ? 
+      res.render("index", { submit }): 
+      res.render("partials/rejected");
+    // res.render("index", { submit });
   })

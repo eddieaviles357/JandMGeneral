@@ -31,13 +31,17 @@
 	height: auto;
 	width: 90%;
 
+	&:not(:last-child) {
+		margin-bottom: 3rem;
+	}
+
 	&__side {
 		height: auto;
-		margin-top: 3rem;
+		// margin-top: 3rem;
 		// position: absolute;
 		position: relative;
 		width: 100%;
-		border-radius: 3px;
+		border-bottom-left-radius: 3px;
 		overflow: hidden;
 		box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 
@@ -46,31 +50,33 @@
 		}
 
 		&--bottom {
-			// clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
-
+			background-image: linear-gradient(
+				rgba(39, 52, 99, 1),
+				rgba(0, 0, 0, 1)
+			);
 			&-1 {
-				background-image: linear-gradient(
-					to right bottom,
-					$color-secondary-light,
-					$color-secondary-dark
-				);
+				// background-image: linear-gradient(
+				// 	to right bottom,
+				// 	$color-secondary-light,
+				// 	$color-secondary-dark
+				// );
 			}
 
 			&-2 {
-				background-image: linear-gradient(
-					to right bottom,
-					$color-primary-light,
-					$color-primary-dark
-				);
+				// background-image: linear-gradient(
+				// 	to right bottom,
+				// 	$color-primary-light,
+				// 	$color-primary-dark
+				// );
 			}
 
 			&-3 {
-				background-image: linear-gradient(
-					to right bottom,
-					$color-tertiary-light,
-					$color-tertiary-dark
-				);
-				margin: -2rem 0 0 0;
+				// background-image: linear-gradient(
+				// 	to right bottom,
+				// 	$color-tertiary-light,
+				// 	$color-tertiary-dark
+				// );
+				// margin: -2rem 0 0 0;
 			}
 		}
 	}
@@ -190,25 +196,12 @@
 		}
 	}
 
-	// UPPER SIDE STYLING
-	// &__cta {
-	// 	position: absolute;
-	// 	top: 50%;
-	// 	left: 50%;
-	// 	transform: translate(-50%, -50%);
-	// 	width: 90%;
-	// 	text-align: center;
-	// 	& a {
-	// 		color: $color-white;
-	// 	}
-	// }
 	&__cta {
 		position: relative;
 		top: 0%;
-		left: 0;
+		left: 92%;
 		transform: translate(0);
 		width: auto;
-		padding: 7rem 4rem 4rem 4rem;
 	}
 
 	//@include respond(tab-port) {
@@ -227,16 +220,6 @@
 		// &__details {
 		// 	padding: 1rem 3rem;
 		// }
-
-		// UPPEr SIDE STYLING
-		&__cta {
-			position: relative;
-			top: 0%;
-			left: 0;
-			transform: translate(0);
-			width: 100%;
-			padding: 7rem 4rem 4rem 4rem;
-		}
 	}
 }
 

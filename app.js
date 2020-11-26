@@ -26,10 +26,6 @@ app.use('/', home);
 
 const PORT = process.env.PORT || 3000;
 
-// app.listen(PORT, () => {
-//   console.log(`App up in ${process.env.NODE_ENV} listening on port ${PORT}!`);
-// });
-
 const server = app.listen(
   PORT, () => 
   console.log(`server up in ${process.env.NODE_ENV} mode on port ${PORT}`)

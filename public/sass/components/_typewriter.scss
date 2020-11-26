@@ -12,31 +12,6 @@
 	padding: 0 3rem;
 	background: var(--whiteRGBA);
 
-	// & .typewriter--button {
-	// 	text-transform: uppercase;
-	// 	text-align: center;
-
-	// 	margin: 2rem auto;
-	// 	padding: 0 1rem;
-	// 	font-size: 1.5rem;
-	// 	font-weight: 700;
-
-	// 	border-radius: 10px;
-
-	// 	border: 1px solid $color-black;
-
-	// 	outline: none;
-	// 	width: auto;
-	// 	height: 3.3rem;
-
-	// 	background-image: linear-gradient(
-	// 		to bottom,
-	// 		rgb(255, 0, 0),
-	// 		rgb(255, 34, 34)
-	// 	);
-	// 	box-shadow: 1px 1px 1px var(--black);
-	// }
-
 	@media only screen and (max-width: $bp-medium) {
 		width: 40%;
 

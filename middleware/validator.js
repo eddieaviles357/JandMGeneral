@@ -10,15 +10,14 @@ const validator = (req, res, next) => {
   let comment = req.body.comment;
 
   // use to remove the form
-  let nameLength = 0;
-  let commentLength = 0;
-    
-    
-  commentLength = comment.length;
-  
-  if(commentLength > 140) {
-    console.log("error");
+  const MAX_NAME_LENGTH = 50;
+  const MAX_COMMENT_LENGTH = 140;
+
+  if(comment.length > MAX_COMMENT_LENGTH || name.length > MAX_NAME_LENGTH) {
+    console.log("ERROR::EXCEDED::LENGTH");
     res.render("partials/rejected");
+    console.log("yesyes")
+    return;
   }
   
   log(name, email, comment);
@@ -26,22 +25,31 @@ const validator = (req, res, next) => {
   log2(comment, "comment");
     
   // remove whitespace
+  if(comment.length === 0) { comment += "No Comment" };
+
   let noWhtSpcName = removeWhiteSpace(name, "name", true);
   let noWhtSpcComment = removeWhiteSpace(comment, "comment", true);
-  
+
+
+  console.log(noWhtSpcName)
+  console.log(noWhtSpcComment)
+
+  res.locals.submit = false;
+
   if(
     !isEmail(email) || 
     !isAlpha(noWhtSpcName, "en-US") || 
     !isAlphanumeric(noWhtSpcComment, "en-US") )
     { 
       console.log("error");
-      res.render("partials/rejected");
+      next();
+      return;
     } 
     else 
     {
-      req.submit = true;
-      console.log("isSubmit: ", req.submit);
+      res.locals.submit = true;
       next();
+      return;
     }
 }
   
@@ -66,5 +74,5 @@ function removeWhiteSpace(arg, string, itIs = false) {
       
       console.log(`No whitespace ( ${string} ) is: ( ${arg.trim().split(" ").join("S")} )`);
     }
-    return arg.trim().split(" ").join("S"); // array 
+    return arg.trim().split(" ").join("SPC"); // array 
   }
