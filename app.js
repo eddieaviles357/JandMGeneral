@@ -1,3 +1,4 @@
+"use strict";
 const dotenv = require("dotenv"),
       path = require("path"),
       express = require("express"),
@@ -26,6 +27,7 @@ app.use('/', home);
 
 const PORT = process.env.PORT || 3000;
 
+console.log(typeof process.env.USERNAME)
 const server = app.listen(
   PORT, () => 
   console.log(`server up in ${process.env.NODE_ENV} mode on port ${PORT}`)

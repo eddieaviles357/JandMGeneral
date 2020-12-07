@@ -1,13 +1,11 @@
+"use strict";
+// dependencies
 const { json } = require("express");
 const { isEmail, isAlpha, isAlphanumeric } = require("validator"); // Validate user input
 
-
-
-const validator = (req, res, next) => {
+const validator = async(req, res, next) => {
   // initialize to strings for validation to work
-  let name = req.body.name;
-  let email = req.body.email;
-  let comment = req.body.comment;
+  let { name, email, comment } = req.body;
 
   // use to remove the form
   const MAX_NAME_LENGTH = 50;
@@ -36,21 +34,24 @@ const validator = (req, res, next) => {
 
   res.locals.submit = false;
 
-  if(
-    !isEmail(email) || 
-    !isAlpha(noWhtSpcName, "en-US") || 
-    !isAlphanumeric(noWhtSpcComment, "en-US") )
-    { 
-      console.log("error");
-      next();
-      return;
-    } 
-    else 
-    {
-      res.locals.submit = true;
-      next();
-      return;
-    }
+
+
+
+if(
+  !isEmail(email) || 
+  !isAlpha(noWhtSpcName, "en-US") || 
+  !isAlphanumeric(noWhtSpcComment, "en-US") )
+  { 
+    console.log("error");
+    next();
+    return;
+  } 
+  else 
+  {
+    res.locals.submit = true;
+    next();
+    return;
+  }
 }
   
 module.exports = validator;
