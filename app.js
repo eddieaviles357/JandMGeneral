@@ -39,8 +39,3 @@ const server = app.listen(
   // Close server and exit process
   server.close(() => process.exit(1));
 })
-
-
-// google
-// https://mybusiness.googleapis.com/v4/accounts/{accountId}/locations/ChIJD3rU6njW3IARauGd5x1X0Ys/reviews
-// https://github.com/eddieaviles357/JandMGeneral.git
