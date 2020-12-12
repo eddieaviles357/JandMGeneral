@@ -1,7 +1,11 @@
 .typewriter__container {
-	position: absolute;
-	top: 0%;
-	left: 0%;
+	// position: absolute;
+	// top: 0%;
+	// left: 0%;
+	position: relative;
+	grid-row: 2 / 3;
+	grid-column: 1 / -1;
+	margin: 0;
 
 	z-index: 1;
 	display: flex;
@@ -13,9 +17,23 @@
 	background: var(--whiteRGBA);
 
 	@media only screen and (max-width: $bp-medium) {
-		width: 40%;
-
+		background-image: linear-gradient(
+			to right bottom,
+			rgba(0, 0, 0, 0.85),
+			rgba(39, 52, 99, 0.85)
+		);
+		// width: 100%;
+		width: 80%;
+		height: 50%;
 		padding: 0 1rem;
+		margin: auto auto;
+
+		border-radius: 1rem;
+		grid-column: 1 / -1;
+	}
+
+	@media only screen and (max-width: $bp-small) {
+		width: 100%;
 	}
 }
 
@@ -29,18 +47,22 @@
 	color: var(--black);
 	font-weight: 200;
 	margin: 0.4rem;
+
+	@media only screen and (max-width: $bp-medium) {
+		// background-image: linear-gradient(
+		// 	to right bottom,
+		// 	rgba(0, 0, 0, 0.85),
+		// 	rgba(39, 52, 99, 0.85)
+		// );
+
+		color: var(--white);
+	}
 }
 
 .typewriter--header1 {
 	font-size: 3.5rem;
 	text-align: center;
 
-	& .middle {
-		font-size: 2.3rem;
-		// background: blue;
-
-		display: inline-block;
-	}
 	@media only screen and (max-width: $bp-large) {
 		font-size: 5rem;
 	}

@@ -56,6 +56,9 @@ body {
   /* left to right */
   grid-template-columns: [grid-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [grid-end];
   /*gap: 1rem 1rem;*/ }
+  @media only screen and (max-width: 50em) {
+    .container {
+      grid-template-rows: min-content 80vh repeat(10, min-content); } }
 
 ::selection {
   background-color: rgba(39, 52, 99, 0.9);
@@ -105,16 +108,14 @@ h5 {
     transform: scale(1); } }
 
 .header {
-  grid-column: 1 / -1;
-  grid-row: 1 / 2;
-  position: fixed;
-  min-height: 5.4rem;
-  width: 100%;
   background: var(--background);
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-  text-align: center;
-  z-index: 9;
-  transition: all 0.5s; }
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .header .logo {
+    padding-left: 6rem; }
   .header .logo-img {
     width: auto;
     height: 5rem;
@@ -133,8 +134,8 @@ h5 {
   .nav-toggle-label {
     position: absolute;
     top: 0;
-    left: 0;
-    margin: 2rem 0 0 1rem;
+    right: 6rem;
+    margin: 2rem 0 0 0;
     padding: 0 1rem;
     height: 50%;
     display: flex;
@@ -143,12 +144,17 @@ h5 {
 .nav-toggle-label span,
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
-  display: block;
   background: black;
   height: 2px;
   width: 2em;
   border-radius: 2px;
-  position: relative; }
+  position: relative;
+  display: none; }
+  @media only screen and (max-width: 50em) {
+    .nav-toggle-label span,
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+      display: block; } }
 
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
@@ -162,103 +168,20 @@ h5 {
   top: 7px; }
 
 .nav {
-  position: absolute;
-  text-align: left;
-  top: 100%;
-  left: 0;
-  background: var(--background);
-  width: 100%;
-  transform: scale(1, 0);
-  transform-origin: top;
-  transition: transform 400ms ease-in-out; }
+  position: relative;
+  padding-right: 6rem; }
   .nav__list {
-    margin: 0;
-    padding: 0;
     list-style: none;
-    font-weight: 700; }
-    .nav__list--item {
-      margin-bottom: 1em;
-      margin-left: 1em;
-      width: 100%; }
-  .nav a {
-    color: var(--black);
-    text-decoration: none;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    opacity: 0;
-    border-radius: var(--smRad); }
-    .nav a:before {
-      content: "";
-      border-left: solid 3px #f9d527;
-      padding-right: 0.5rem; }
-    .nav a:hover {
-      padding: 0.6rem 1.5rem 0.6rem 0.2rem;
-      background: rgba(78, 78, 78, 0.2); }
-    .nav a:active {
-      background: rgba(0, 0, 0, 0.4);
-      color: #fff; }
-
-.nav-toggle:checked ~ nav {
-  transform: scale(1, 1); }
-  .nav-toggle:checked ~ nav a {
-    opacity: 1;
-    transition: opacity 250ms ease-in-out 250ms; }
-
-.logo {
-  grid-column: 2 / 3;
-  margin: 2.3rem 0; }
-
-/* big size  overwrites small size */
-@media screen and (min-width: 50em) {
-  .nav-toggle-label {
-    display: none; }
-  .header {
-    display: grid;
-    grid-template-columns: 1fr auto minmax(600px, 3fr) 8rem; }
-  .logo {
-    grid-column: 2 / 3;
-    margin: auto 0; }
-  .nav {
-    position: relative;
-    text-align: left;
-    transition: none;
-    transform: scale(1, 1);
-    background: none;
-    top: initial;
-    left: initial;
-    /* end Edge support */
-    grid-column: 3 / 4;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center; }
-    .nav ul {
-      display: flex; }
-    .nav li {
-      margin-left: 3em;
-      margin-bottom: 0; }
-    .nav a {
-      opacity: 1;
-      position: relative; }
-      .nav a::before {
-        content: "";
-        display: block;
-        height: 5px;
-        background: #f9d527;
+    font-size: 2rem;
+    display: flex; }
+    @media only screen and (max-width: 50em) {
+      .nav__list {
         position: absolute;
-        top: -0.75em;
-        left: 0;
         right: 0;
-        transform: scale(0, 1);
-        transition: transform ease-in-out 250ms; }
-      .nav a:hover::before {
-        border-left: none;
-        transform: scale(1, 1); }
-      .nav a:hover {
-        padding: 0;
-        background: none; }
-      .nav a:active {
-        background: rgba(0, 0, 0, 0.7);
-        color: var(--white); } }
+        top: -25rem;
+        flex-direction: column; } }
+    .nav__list--item {
+      padding: 0 0.7rem; }
 
 /* The Modal (background) */
 .modal {
@@ -383,9 +306,10 @@ h5 {
   background: url("..//..//img/gal-9.jpeg") no-repeat center center/cover; }
 
 .typewriter__container {
-  position: absolute;
-  top: 0%;
-  left: 0%;
+  position: relative;
+  grid-row: 2 / 3;
+  grid-column: 1 / -1;
+  margin: 0;
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -396,8 +320,16 @@ h5 {
   background: var(--whiteRGBA); }
   @media only screen and (max-width: 50em) {
     .typewriter__container {
-      width: 40%;
-      padding: 0 1rem; } }
+      background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.85), rgba(39, 52, 99, 0.85));
+      width: 80%;
+      height: 50%;
+      padding: 0 1rem;
+      margin: auto auto;
+      border-radius: 1rem;
+      grid-column: 1 / -1; } }
+  @media only screen and (max-width: 37.5em) {
+    .typewriter__container {
+      width: 100%; } }
 
 /* Cursor */
 .txt-type > .txt {
@@ -408,13 +340,14 @@ h5 {
   color: var(--black);
   font-weight: 200;
   margin: 0.4rem; }
+  @media only screen and (max-width: 50em) {
+    .typewriter--header1,
+    .typewriter--header2 {
+      color: var(--white); } }
 
 .typewriter--header1 {
   font-size: 3.5rem;
   text-align: center; }
-  .typewriter--header1 .middle {
-    font-size: 2.3rem;
-    display: inline-block; }
   @media only screen and (max-width: 62.5em) {
     .typewriter--header1 {
       font-size: 5rem; } }
@@ -500,20 +433,18 @@ h5 {
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset;
     border-color: #000; }
 
-.title {
-  transition: all 1s;
-  opacity: 0;
-  transform: translateX(-50rem); }
+#form-button {
+  width: 100%; }
+
+#main-button {
+  width: 40%; }
+  @media only screen and (max-width: 37.5em) {
+    #main-button {
+      width: 50%; } }
 
 .interGallHeader {
   opacity: 1;
   transform: translateX(0); }
-
-.interNav {
-  transition: all 0.5s;
-  color: var(--yellow) !important;
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
-  background: rgba(219, 30, 30, 0) !important; }
 
 .container-header {
   position: fixed;

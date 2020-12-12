@@ -1,0 +1,111 @@
+<%- include ("../partials/header") -%>
+  <!-- Footer Information -->
+  <footer class="footer" id="contact">
+    <h3 class="footer__header">
+      Contact Us
+      <hr>
+    </h3>
+    <section class="footer__info">
+      <div class="footer__info--address">
+        J & M General Contractors 
+        <br>
+        Fullerton, CA 
+        License # 1002460
+      </div>
+      <div class="footer__info--phone">
+        Call us: 866-755-4001 
+      </div>
+      <br>
+      <p>
+        OR
+        <br>
+        <br>
+        to reach
+      </p>
+      <br>
+      <br>
+      <div class="footer__info--sub-contact">
+        Nancy Montellano/Office Manager: 714-323-0649
+        <br>
+        Katrina Shuper/Administration: 714-872-7224
+      </div>
+      <br>
+      <br>
+      <br>
+      <div class="footer__info--email">
+        Email us:SERVICE@JMGCINC.COM
+      </div>
+    </section>
+    <!-- Form -->
+    <% if(!submit) { %>
+<section class="footer__form">
+	<p>
+		Thank you for taking the time to contact us!
+		
+		To request your free estimate, please use the 
+		form below to give us some 
+		
+		details about your project.
+  </p>
+    
+    <form class="form" action="/" method="POST">
+      <div class="form__group">
+			<input 
+      class="form__input" 
+      type="text" 
+      name="name" 
+      id="name" 
+      placeholder="Name" 
+      pattern="[A-Z a-z]{1,50}"
+      required
+			>
+			<label class="form__label" for="name">Name </label>
+		</div>
+		<div class="form__group">
+      <input 
+      type="email" 
+      name="email" 
+      class="form__input" 
+      placeholder="Email address" 
+      id="email" 
+      required
+			>
+			<label 
+      for="email" 
+      class="form__label"
+			>
+      Email address
+    </label>
+		</div>
+		<textarea 
+    name="comment" 
+    id="comments" 
+    autocomplete="off" 
+    cols="30" 
+    rows="10" 
+    maxlength="140"
+    onfocus="this.value='';"
+    pattern="[A-Z a-z]{140}"
+    class="form__textarea"
+    placeholder="Comment Max characters 140" 
+		>
+  </textarea>
+  <label 
+  for="comment" 
+  class="form__label"
+  >
+  Comment
+</label>
+<!-- <div class="form__group"> -->
+			<button class="btn btn-generic" id="form-button">
+        Submit
+			</button>
+      <!-- </div> -->
+    </form>
+  </section>
+  <% } else { %>
+  <%- include ("footer/submitForm") -%>
+  <% } %>
+</footer>
+
+<%- include ("../partials/footer") -%> -->

@@ -9,10 +9,25 @@ module.exports =
   router
   .get('/', (req,res) => {
     // used to render form
-    res.locals.submit = false;
     res.render("index");
   })
-  .post('/', validator, mailSender, (req, res) => {
+  .get('/about-us', (req, res) => {
+    res.render("pages/about-us");
+  })
+  .get('/services', (req, res) => {
+    res.render("pages/services");
+  })
+  .get('/gallery', (req, res) => {
+    res.render("pages/gallery");
+  })
+  .get('/contact', (req, res) => {
+    res.locals.submit = false;
+    res.render("pages/contact");
+  })
+  .get('/testimonials', (req, res) => {
+    res.render("pages/testimonials");
+  })
+  .post('/contact', validator, mailSender, (req, res) => {
     const { submit } = res.locals;
-    (submit) ? res.render("index", { submit }): res.render("partials/rejected");
+    (submit) ? res.render("/", { submit }): res.render("partials/rejected");
   })
