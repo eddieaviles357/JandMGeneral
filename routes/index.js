@@ -17,7 +17,7 @@ module.exports =
   .get('/services', (req, res) => {
     res.render("pages/services");
   })
-  .get('/gallery', (req, res) => {
+  .get('/gallery',(req, res) => {
     res.render("pages/gallery");
   })
   .get('/contact', (req, res) => {
