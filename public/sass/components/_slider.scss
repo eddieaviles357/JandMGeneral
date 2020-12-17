@@ -1,8 +1,9 @@
 .slider {
-	position: relative;
+	// position: relative;
 	overflow: hidden;
 	height: 100%;
 	width: auto;
+	z-index: -10;
 }
 
 // where image is shown

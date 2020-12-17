@@ -1,18 +1,16 @@
 .testimonial__header {
-	grid-column: 1 / -1;
-	grid-row: 7 / 8;
 }
 
 .testimonial__container {
-	grid-column: 1 / -1;
-	grid-row: 8 / 9;
-
 	height: auto;
 	width: 100%;
 	padding: 6rem;
 
 	background: $color-white;
-
+	@media only screen and (max-width: $bp-medium) {
+		padding-left: 0;
+		padding-right: 0;
+	}
 	&--wrapper {
 		position: relative;
 		box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);

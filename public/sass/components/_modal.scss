@@ -2,8 +2,8 @@
 .modal {
 	display: none;
 	position: fixed;
-	z-index: 90;
-	padding-top: 10rem;
+	z-index: 99999;
+	// padding-top: 10rem;
 	left: 0;
 	top: 0;
 	width: 100%;
@@ -15,10 +15,25 @@
 
 /* Modal Content (image) */
 .modal-content {
-	margin: auto;
+	margin: 0 auto 0 auto;
 	display: block;
-	width: 80%;
-	max-width: 70rem;
+	max-width: 57rem;
+
+	border: solid 1rem #fff;
+}
+
+.modal-content--bottom {
+	height: 100px;
+	width: 100px;
+	border: 2px solid white;
+	// display: flex;
+	overflow: auto;
+	opacity: 0.5;
+	&:hover {
+		opacity: 1;
+		cursor: pointer;
+		transform: scale(1.05);
+	}
 }
 
 /* Caption of Modal Image */
@@ -63,11 +78,21 @@
 .close {
 	position: absolute;
 	top: 1.5rem;
-	right: 3.5rem;
+	right: 1.5rem;
 	color: #f1f1f1;
-	font-size: 4rem;
+	font-size: 2rem;
 	font-weight: bold;
 	transition: 0.3s;
+	z-index: 100;
+	&::after {
+		content: "close";
+		background: #7d1e1e;
+		width: 1rem;
+		height: 1rem;
+		border-radius: 3px;
+		border: solid 2px white;
+		padding: 0 1rem;
+	}
 }
 
 .close:hover,
@@ -93,4 +118,43 @@
 	left: 0;
 
 	background: pink;
+}
+
+.galleryDisplay {
+	position: relative;
+	overflow: auto;
+
+	display: block;
+	width: 100%;
+	padding: 1rem;
+}
+
+.arrows {
+	color: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 59vh;
+
+	&--left,
+	&--right {
+		text-align: center;
+		padding: 1rem 0;
+		font-size: 2rem;
+		display: inline-block;
+		width: 49.5%;
+		height: 100%;
+		& > p {
+			font-size: 21rem;
+		}
+	}
+
+	&--left {
+		padding-right: 20vw;
+	}
+
+	&--right {
+		padding-left: 20vw;
+	}
 }

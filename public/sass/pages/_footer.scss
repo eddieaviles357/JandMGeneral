@@ -1,7 +1,4 @@
 .footer {
-	grid-column: 1 / -1;
-	grid-row: 11 / 12;
-
 	display: grid;
 	grid-template-columns: repeat(9, 1fr);
 	grid-template-rows: repeat(8, min-content);

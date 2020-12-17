@@ -1,14 +1,9 @@
 // Service header
 .service__header {
-	grid-column: 1 / -1;
-	grid-row: 3 / 4;
 	color: white;
 } // end of Service Header
 
 .card-container {
-	grid-column: 1 / -1;
-	grid-row: 4 / 5;
-
 	position: relative;
 	height: auto;
 	width: 100%;
@@ -31,6 +26,9 @@
 	height: auto;
 	width: 90%;
 
+	@media only screen and (max-width: $bp-medium) {
+		width: 100%;
+	}
 	&:not(:last-child) {
 		margin-bottom: 3rem;
 	}

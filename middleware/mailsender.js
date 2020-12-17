@@ -4,10 +4,11 @@ const nodemailer = require("nodemailer");
 const mailSender = (req, res, next) => {
   const subj = "Hello from Node js";
   const txt = "This is a test!";
-  const srcTo = "eduardoaviles357@gmail.com";
+  const srcTo = "eduardoaviles357@yahoo.com";
+  // const srcTo = "eduardoaviles357@gmail.com";
   const bodyHTML = "<h1>This is a test html</h1><div>this is part of the div</div>";
 
-  // SendEmail(subj, txt, srcTo, bodyHTML);
+  SendEmail(subj, txt, srcTo, bodyHTML);
   next();
   return;
 };
@@ -23,28 +24,36 @@ function SendEmail(subject, text, to, html) {
     // name: 'office365',
     // name: 'yahoo',
     // name: 'gmail',
-    host: 'smtp.office365.com',
-    port:   587,
+    // host: 'smtp.office365.com',
+    // port:   587,
     // port:   465,
     // secureConnection: false, // true for 465, false for other ports
-    secure: false,
-    auth: {
-        user: process.env.USER_NAME,
-        pass: process.env.PASSWORD
-    },
+    // secure: false,
+    // auth: {
+    //     user: process.env.USER_NAME,
+    //     pass: process.env.PASSWORD
+    // },
     // tls: {
     //   rejectUnauthorized: false,
     //   ciphers: 'SSLv3'
     // }
-    STARTTLS: {
-      rejectUnauthorized: false,
-      ciphers: 'SSLv3'
+    // STARTTLS: {
+    //   rejectUnauthorized: false,
+    //   ciphers: 'SSLv3'
+    // }
+
+    // test
+    host: 'smtp.ethereal.email',
+    port: 587,
+    auth: {
+        user: process.env.USER_NAME,
+        pass: process.env.PASSWORD  
     }
   });
   
   // setup e-mail data with unicode symbols 
   let mailOptions = {
-    from: 'eduardoaviles357@gmail.com',
+    from: process.env.USER_NAME,
     to,
     subject,
     text,
@@ -57,7 +66,8 @@ function SendEmail(subject, text, to, html) {
       return console.log("ERROR::",error);
     }
     console.log("message sent");
-    console.log(info)
+    console.log(info);
+    console.log("COPY URL on the browser and see the message")
     console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
   });
 }
