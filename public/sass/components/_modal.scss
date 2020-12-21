@@ -22,20 +22,6 @@
 	border: solid 1rem #fff;
 }
 
-.modal-content--bottom {
-	height: 100px;
-	width: 100px;
-	border: 2px solid white;
-	// display: flex;
-	overflow: auto;
-	opacity: 0.5;
-	&:hover {
-		opacity: 1;
-		cursor: pointer;
-		transform: scale(1.05);
-	}
-}
-
 /* Caption of Modal Image */
 #caption {
 	margin: auto;
@@ -122,11 +108,27 @@
 
 .galleryDisplay {
 	position: relative;
-	overflow: auto;
-
-	display: block;
 	width: 100%;
 	padding: 1rem;
+}
+
+.galleryDisplay__container {
+	display: flex;
+	justify-content: space-between;
+	overflow: auto;
+}
+
+.modal-content--bottom {
+	height: 100px;
+	width: 100px;
+	border: 2px solid white;
+	opacity: 0.5;
+	margin: 0 1rem;
+	&:hover {
+		opacity: 1;
+		cursor: pointer;
+		transform: scale(1.05);
+	}
 }
 
 .arrows {

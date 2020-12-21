@@ -336,15 +336,15 @@
 		transition: all 0.2s;
 
 		&:hover {
-			border: solid 1px black;
 			// background-image: linear-gradient(
 			// 	90deg,
 			// 	var(--orange-linear) 20%,
 			// 	var(--yellow-linear) 80%
 			// );
 			// box-shadow: 0 0 1px black;
+			opacity: 0.4;
 			@media only screen and (max-width: $bp-medium) {
-				box-shadow: none;
+				// box-shadow: none;
 			}
 		}
 	}

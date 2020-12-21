@@ -6,13 +6,14 @@
 
 	display: flex;
 	flex-direction: column;
-	justify-content: space-evenly;
+	justify-content: center;
+	align-items: center;
 
 	height: 100%;
 	width: 50%;
 	padding: 0 14rem 0 0;
 
-	background: rgba(170, 170, 170, 0.4);
+	background: rgba(194, 192, 192, 0.534);
 	z-index: 10;
 	clip-path: polygon(0 0, 100% 0, 58% 100%, 0% 100%);
 
@@ -63,11 +64,11 @@
 }
 
 .typewriter--header1 {
-	font-size: 3.5rem;
+	font-size: 4rem;
 	text-align: center;
 
 	@media only screen and (max-width: $bp-large) {
-		font-size: 5rem;
+		font-size: 4rem;
 	}
 
 	@media only screen and (max-width: $bp-medium) {
@@ -93,5 +94,18 @@
 
 .typewriter--lower {
 	display: flex;
+	width: 75%;
 	flex-direction: column;
+	align-items: center;
+	font-size: 2rem;
+
+	& .phone-number {
+		font-weight: bold;
+		letter-spacing: 0.5rem;
+		color: #fff;
+		padding-bottom: 1rem;
+		@media only screen and (max-width: $bp-medium) {
+			color: #000;
+		}
+	}
 }

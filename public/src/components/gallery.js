@@ -11,6 +11,11 @@ let arrRight = document.querySelector(".arrows--right");
 let prev;
 let next;
 
+// .addEventListener("mousemove", function(e) {
+// 	modal.style.top = `${e.clientY}px`;
+// 	modal.style.left = `${e.clientX}px`;
+// } )
+
 galleryItem.forEach(function(img, idx) {
 	modalImgBottom[idx].src = img.firstElementChild.src;
 
@@ -34,9 +39,9 @@ galleryItem.forEach(function(img, idx) {
 	})
 })
 
-arrLeft.addEventListener("click", (e) => {
-	current.src = prev.nextElementSibling.children[0].src;
-})
+// arrLeft.addEventListener("click", (e) => {
+// 	current.src = prev.nextElementSibling.children[0].src;
+// })
 
 		// Give the small lower img's a click event to display as the main IMG
 modalImgBottom.forEach((img, idx) => {
