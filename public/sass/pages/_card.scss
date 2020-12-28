@@ -16,7 +16,7 @@
 	background-color: $color-white;
 	// overflow: hidden;
 
-	padding: 5rem 0;
+	padding: 6rem 0;
 	color: black;
 }
 
@@ -24,10 +24,11 @@
 	// FUNCTIONALITY
 	position: relative;
 	height: auto;
-	width: 90%;
+	width: 100%;
+	padding: 0 6rem;
 
 	@media only screen and (max-width: $bp-medium) {
-		width: 100%;
+		padding: 0;
 	}
 	&:not(:last-child) {
 		margin-bottom: 3rem;
