@@ -1,12 +1,14 @@
 <%- include ("../partials/header") -%>
-  <!-- Footer Information -->
 <div class="footer__header header__style">
-  <h2>
+  <h2 class="title">
     Contact Us
   </h2>
 </div>
 <section class="form--container">
   <% if(!submit) { %>
+  <p class="form--thanks">
+    Thank you for taking the time to contact us! To request your free estimate, please use the form below to give us some details about your project.
+  </p>
   <form class="form" action="/contact" method="POST">
     <div class="form__group">
       <input 

@@ -1,211 +1,6 @@
-// .header {
-// 	grid-column: 1 / -1;
-// 	grid-row: 1 / 2;
-
-// 	position: fixed;
-
-// 	min-height: 5.4rem;
-// 	width: 100%;
-
-// 	background: var(--background);
-// 	// box-shadow: 0 1px 3px $color-black;
-// 	box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-
-// 	text-align: center;
-
-// 	z-index: 9;
-
-// 	transition: all 0.5s;
-
-// 	& .logo-img {
-// 		width: auto;
-// 		height: 5rem;
-// 		margin-top: 0.5rem;
-// 		background-position: center;
-// 		background-repeat: no-repeat;
-// 		background-origin: top;
-// 	}
-// }
-
-// /* makes it tabbable */
-// .nav-toggle {
-// 	position: absolute !important;
-// 	top: -9999px !important;
-// 	left: -9999px !important;
-// 	&:focus ~ .nav-toggle-label {
-// 		outline: 2px solid rgba(lightblue, 0.75);
-// 	}
-// 	&-label {
-// 		position: absolute;
-// 		top: 0;
-// 		left: 0;
-// 		margin: 2rem 0 0 1rem;
-// 		padding: 0 1rem;
-// 		height: 50%;
-// 		display: flex;
-// 		align-items: center;
-// 	}
-// }
-
-// .nav-toggle-label span,
-// .nav-toggle-label span::before,
-// .nav-toggle-label span::after {
-// 	display: block;
-// 	background: rgb(0, 0, 0);
-// 	height: 2px;
-// 	width: 2em;
-// 	border-radius: 2px;
-// 	position: relative;
-// }
-
-// .nav-toggle-label span::before,
-// .nav-toggle-label span::after {
-// 	content: "";
-// 	position: absolute;
-// }
-
-// .nav-toggle-label span::before {
-// 	bottom: 7px;
-// }
-
-// .nav-toggle-label span::after {
-// 	top: 7px;
-// }
-
-// .nav {
-// 	position: absolute;
-// 	text-align: left;
-// 	top: 100%;
-// 	left: 0;
-// 	background: var(--background);
-// 	width: 100%;
-// 	transform: scale(1, 0);
-// 	transform-origin: top;
-// 	transition: transform 400ms ease-in-out;
-// 	&__list {
-// 		margin: 0;
-// 		padding: 0;
-// 		list-style: none;
-// 		font-weight: 700;
-// 		&--item {
-// 			margin-bottom: 1em;
-// 			margin-left: 1em;
-// 			width: 100%;
-// 		}
-// 	}
-// 	& a {
-// 		color: var(--black);
-// 		text-decoration: none;
-// 		font-size: 1.5rem;
-// 		text-transform: uppercase;
-// 		opacity: 0;
-// 		// padding: 0.8rem;
-// 		border-radius: var(--smRad);
-
-// 		&:before {
-// 			content: "";
-// 			// border-left: solid 3px orange;
-// 			border-left: solid 3px #f9d527;
-// 			padding-right: 0.5rem;
-// 		}
-// 		&:hover {
-// 			padding: 0.6rem 1.5rem 0.6rem 0.2rem;
-// 			background: rgba(78, 78, 78, 0.2);
-// 		}
-// 		&:active {
-// 			background: rgba(0, 0, 0, 0.4);
-// 			color: #fff;
-// 		}
-// 	}
-// }
-
-// .nav-toggle:checked ~ nav {
-// 	transform: scale(1, 1);
-// 	& a {
-// 		opacity: 1;
-// 		transition: opacity 250ms ease-in-out 250ms;
-// 	}
-// }
-
-// .logo {
-// 	grid-column: 2 / 3;
-// 	// margin: 2.3rem 0;
-// 	margin: 0;
-// }
-
-// /* big size  overwrites small size */
-// @media screen and (min-width: $bp-medium) {
-// 	.nav-toggle-label {
-// 		display: none;
-// 	}
-
-// 	.header {
-// 		display: grid;
-// 		grid-template-columns: 1fr auto minmax(600px, 3fr) min(8rem);
-// 	}
-
-// 	.logo {
-// 		grid-column: 2 / 3; // to center logo
-// 		// grid-column: 1 / 2;
-// 		margin: auto 0;
-// 	}
-
-// 	.nav {
-// 		// all: unset; /* this causes issues with Edge, since it's unsupported */
-// 		position: relative;
-// 		text-align: left;
-// 		transition: none;
-// 		transform: scale(1, 1);
-// 		background: none;
-// 		top: initial;
-// 		left: initial;
-// 		/* end Edge support */
-
-// 		grid-column: 3 / 4;
-// 		display: flex;
-// 		justify-content: flex-end;
-// 		align-items: center;
-// 		& ul {
-// 			display: flex;
-// 		}
-// 		& li {
-// 			margin-left: 3em;
-// 			margin-bottom: 0;
-// 		}
-// 		& a {
-// 			opacity: 1;
-// 			position: relative;
-// 			&::before {
-// 				content: "";
-// 				display: block;
-// 				height: 5px;
-// 				background: #f9d527;
-// 				position: absolute;
-// 				top: -0.75em;
-// 				left: 0;
-// 				right: 0;
-// 				transform: scale(0, 1);
-// 				transition: transform ease-in-out 250ms;
-// 			}
-// 			&:hover::before {
-// 				border-left: none;
-// 				transform: scale(1, 1);
-// 			}
-// 			&:hover {
-// 				padding: 0;
-// 				background: none;
-// 			}
-// 			&:active {
-// 				background: rgba(0, 0, 0, 0.7);
-// 				color: var(--white);
-// 			}
-// 		}
-// 	}
-// }
-
 .header {
 	z-index: 9999;
-	background: var(--background);
+	background: #fcfeff;
 	// box-shadow: 0 1px 3px $color-black;
 	// box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 
@@ -311,10 +106,10 @@
 
 	opacity: 1;
 	transition: all 0.5s;
-	z-index: -1;
+	z-index: -99999;
 
 	@media only screen and (max-width: $bp-medium) {
-		opacity: 0;
+		opacity: 1;
 		width: 100vw;
 		position: absolute;
 		right: 0;
@@ -328,6 +123,8 @@
 		font-size: 1.75rem;
 		letter-spacing: 0.3rem;
 		color: white;
+
+		z-index: -99999;
 	}
 
 	&--item {
@@ -356,19 +153,19 @@
 
 // used for event click for hamburger
 .hamburger {
-	transform: translateY(3.2rem);
-	opacity: 1;
-	// background-image: linear-gradient(
-	// 	to right bottom,
-	// 	rgba(0, 0, 0, 0.9),
-	// 	rgba(39, 52, 99, 0.9)
-	// );
-	background: white;
-	& .nav--link {
-		opacity: 1;
+	@media only screen and (max-width: $bp-medium) {
+
+		position: absolute;
+		z-index: -9999;
+		transform: translateY(3.2rem);
+		// opacity: 1;
+		background: white;
+		// & .nav--link {
+		// 	opacity: 1;
+		// }
 	}
 }
 
-.hamburger-title {
-	transform: translateY(20rem);
-}
+// .hamburger-title {
+// 	transform: translateY(20rem);
+// }

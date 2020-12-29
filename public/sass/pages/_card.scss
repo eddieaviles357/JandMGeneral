@@ -7,15 +7,15 @@
 	position: relative;
 	height: auto;
 	width: 100%;
-
+	
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-
+	
 	background-color: $color-white;
 	// overflow: hidden;
-
+	
 	padding: 6rem 0;
 	color: black;
 }
@@ -26,14 +26,14 @@
 	height: auto;
 	width: 100%;
 	padding: 0 6rem;
-
+	
 	@media only screen and (max-width: $bp-medium) {
 		padding: 0;
 	}
 	&:not(:last-child) {
 		margin-bottom: 3rem;
 	}
-
+	
 	&__side {
 		height: auto;
 		// margin-top: 3rem;
@@ -43,18 +43,18 @@
 		border-bottom-left-radius: 3px;
 		overflow: hidden;
 		box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
-
+		
 		&--upper {
 			background-color: $color-white;
 		}
-
+		
 		&--bottom {
 			background-image: linear-gradient(
 				rgba(39, 52, 99, 1),
 				rgba(0, 0, 0, 1)
-			);
-			&-1 {
-				// background-image: linear-gradient(
+				);
+				&-1 {
+					// background-image: linear-gradient(
 				// 	to right bottom,
 				// 	$color-secondary-light,
 				// 	$color-secondary-dark
@@ -63,8 +63,8 @@
 
 			&-2 {
 				// background-image: linear-gradient(
-				// 	to right bottom,
-				// 	$color-primary-light,
+					// 	to right bottom,
+					// 	$color-primary-light,
 				// 	$color-primary-dark
 				// );
 			}
@@ -79,7 +79,7 @@
 			}
 		}
 	}
-
+	
 	// FRONT SIDE STYLING
 	&__picture {
 		background-size: cover;
@@ -90,74 +90,74 @@
 		// clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 		border-top-left-radius: 3px;
 		border-top-right-radius: 3px;
-
+		
 		&--1 {
 			background-size: bottom;
 			background-image: linear-gradient(
-					to right bottom,
-					$color-secondary-light,
+				to right bottom,
+				$color-secondary-light,
 					$color-secondary-dark
-				),
-				url(../img/gal-1.jpeg);
+					),
+					url(../img/gal-1.jpeg);
 		}
-
+		
 		&--2 {
 			background-image: linear-gradient(
-					to right bottom,
+				to right bottom,
 					$color-primary-light,
 					$color-primary-dark
-				),
+					),
 				url(../img/gal-2.jpeg);
-		}
-
+			}
+			
 		&--3 {
 			background-image: linear-gradient(
-					to right bottom,
-					$color-tertiary-light,
-					$color-tertiary-dark
+				to right bottom,
+				$color-tertiary-light,
+				$color-tertiary-dark
 				),
 				url(../img/gal-3.jpeg);
+			}
 		}
-	}
-
-	&__heading {
-		font-size: 2.8rem;
-		font-weight: 300;
-		text-transform: uppercase;
-		text-align: right;
+		
+		&__heading {
+			font-size: 2.8rem;
+			font-weight: 300;
+			text-transform: uppercase;
+			text-align: right;
 		color: $color-white;
 		position: absolute;
 		top: 12rem;
 		right: 2rem;
 		width: 75%;
 	}
-
+	
 	&__heading-span {
 		padding: 1rem 1.5rem;
 		// will have the style after the text breaks or wraps
 		// https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break
 		-webkit-box-decoration-break: clone;
 		box-decoration-break: clone;
-
+		
 		&--1 {
 			background-image: linear-gradient(
 				to right bottom,
 				rgba($color-secondary-light, 0.85),
 				rgba($color-secondary-dark, 0.85)
-			);
-		}
-
-		&--2 {
-			background-image: linear-gradient(
-				to right bottom,
-				rgba($color-primary-light, 0.85),
-				rgba($color-primary-dark, 0.85)
-			);
-		}
-
-		&--3 {
-			background-image: linear-gradient(
-				to right bottom,
+				);
+			}
+			
+			&--2 {
+				background-image: linear-gradient(
+					to right bottom,
+					rgba($color-primary-light, 0.85),
+					rgba($color-primary-dark, 0.85)
+					);
+				}
+				
+				&--3 {
+					background-image: linear-gradient(
+						to right bottom,
 				rgba($color-tertiary-light, 0.85),
 				rgba($color-tertiary-dark, 0.85)
 			);
@@ -170,10 +170,10 @@
 			list-style: none;
 			width: 80%;
 			margin: 0 auto;
-
+			
 			li {
 				text-align: center;
-				font-size: 1.5rem;
+				font-size: 2rem;	
 				padding: 1rem;
 
 				&:not(:last-child) {
@@ -223,11 +223,11 @@
 }
 
 .expand--1 {
-	height: 68vh;
+	height: 100%;
 }
 .expand--2 {
-	height: 75vh;
+	height: 100%;
 }
 .expand--3 {
-	height: 98vh;
+	height: 100%;
 }
