@@ -19,6 +19,7 @@
 	display: block;
 	max-width: 57rem;
 
+	object-fit: cover;
 	border: solid 1rem #fff;
 }
 
@@ -95,16 +96,6 @@
 	}
 }
 
-.left {
-	height: 5rem;
-	width: 5rem;
-
-	position: absolute;
-	top: 0;
-	left: 0;
-
-	background: pink;
-}
 
 .galleryDisplay {
 	position: relative;
@@ -116,6 +107,7 @@
 	display: flex;
 	justify-content: space-between;
 	overflow: auto;
+	padding: 1rem 0;
 }
 
 .modal-content--bottom {
@@ -131,32 +123,3 @@
 	}
 }
 
-.arrows {
-	color: #fff;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 59vh;
-
-	&--left,
-	&--right {
-		text-align: center;
-		padding: 1rem 0;
-		font-size: 2rem;
-		display: inline-block;
-		width: 49.5%;
-		height: 100%;
-		& > p {
-			font-size: 21rem;
-		}
-	}
-
-	&--left {
-		padding-right: 20vw;
-	}
-
-	&--right {
-		padding-left: 20vw;
-	}
-}
