@@ -166,6 +166,7 @@
 
 	&__details {
 		padding: 3rem;
+		height: 20%;
 		ul {
 			list-style: none;
 			width: 80%;
@@ -182,25 +183,37 @@
 			}
 		}
 
-		&--1 {
-			height: 30vh;
-		}
-
-		&--2 {
-			height: 30vh;
-		}
-
+		&--1,
+		&--2,
 		&--3 {
-			height: 30vh;
+			height: 32vh;
 		}
+
+		// &--1 {
+		// 	height: 30vh;
+		// }
+		// &--2 {
+		// 	height: 30vh;
+		// }
+
+		// &--3 {
+		// 	height: 30vh;
+		// }
 	}
 
 	&__cta {
 		position: relative;
 		top: 0%;
-		left: 92%;
+		// left: 95%;
+		left: 47%;
 		transform: translate(0);
 		width: auto;
+		@media only screen and (max-width: $bp-medium) {
+			left: 45%;
+		}
+		@media only screen and (max-width: $bp-small) {
+			left: 43%;
+		}
 	}
 
 	//@include respond(tab-port) {

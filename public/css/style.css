@@ -524,13 +524,12 @@ a {
     border-color: #000; }
 
 .btn-expand {
-  width: 8%;
+  width: 5%;
   height: 20%;
   margin: 0 auto 0 auto;
   font-family: inherit;
   font-size: 2rem;
   font-weight: 600;
-  padding: 0.5em 1em;
   color: #444;
   /* rgba not supported (IE 8) */
   color: rgba(0, 0, 0, 0.8);
@@ -543,6 +542,9 @@ a {
   .btn-expand:active {
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset;
     border-color: #000; }
+  @media only screen and (max-width: 50em) {
+    .btn-expand {
+      width: 15%; } }
 
 #form-button {
   min-width: 20%;
@@ -680,7 +682,8 @@ a {
     .card__heading-span--3 {
       background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.85), rgba(39, 52, 99, 0.85)); }
   .card__details {
-    padding: 3rem; }
+    padding: 3rem;
+    height: 20%; }
     .card__details ul {
       list-style: none;
       width: 80%;
@@ -691,18 +694,20 @@ a {
         padding: 1rem; }
         .card__details ul li:not(:last-child) {
           border-bottom: 1px solid #aaa; }
-    .card__details--1 {
-      height: 30vh; }
-    .card__details--2 {
-      height: 30vh; }
-    .card__details--3 {
-      height: 30vh; }
+    .card__details--1, .card__details--2, .card__details--3 {
+      height: 32vh; }
   .card__cta {
     position: relative;
     top: 0%;
-    left: 92%;
+    left: 47%;
     transform: translate(0);
     width: auto; }
+    @media only screen and (max-width: 50em) {
+      .card__cta {
+        left: 45%; } }
+    @media only screen and (max-width: 37.5em) {
+      .card__cta {
+        left: 43%; } }
   @media only screen and (max-width: 56.25em) {
     .card {
       height: auto;
