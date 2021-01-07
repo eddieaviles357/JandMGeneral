@@ -192,7 +192,6 @@ a {
   font-size: 2rem;
   display: flex;
   opacity: 1;
-  transition: all 0.5s;
   z-index: -99999; }
   @media only screen and (max-width: 50em) {
     .nav__list {
@@ -211,19 +210,21 @@ a {
       z-index: -99999; } }
   .nav__list--item {
     padding: 0 0.7rem;
-    border-radius: 5px;
-    transition: all 0.2s; }
+    border-radius: 5px; }
     .nav__list--item:hover {
       opacity: 0.4; }
-  .nav__list .nav--link {
-    opacity: 1; }
+  @media only screen and (max-width: 50em) {
+    .nav__list .nav--link {
+      opacity: 0; } }
 
 @media only screen and (max-width: 50em) {
   .hamburger {
     position: absolute;
     z-index: -9999;
     transform: translateY(3.2rem);
-    background: white; } }
+    background: white; }
+    .hamburger .nav--link {
+      opacity: 1; } }
 
 /* The Modal (background) */
 .modal {
