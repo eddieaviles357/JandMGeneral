@@ -14,7 +14,6 @@ const validator = async(req, res, next) => {
   if(comment.length > MAX_COMMENT_LENGTH || name.length > MAX_NAME_LENGTH) {
     console.log("ERROR::EXCEDED::LENGTH");
     res.render("partials/rejected");
-    console.log("yesyes")
     return;
   }
   

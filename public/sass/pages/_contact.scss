@@ -1,5 +1,6 @@
 .form--container {
 	width: 50%;
+	min-height: 70vh;
 	margin: 0 auto;
 
 	padding: 6rem 0;
@@ -79,4 +80,13 @@
 			border-bottom: 3px solid var(--danger);
 		}
 	}
+}
+
+.submit__container {
+	padding-top: 6rem;
+	height: 50%;
+}
+.submit-thanks {
+	text-align: center;
+	font-size: 3rem;
 }
