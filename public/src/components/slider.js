@@ -1,9 +1,10 @@
 const slides = document.querySelectorAll(".slide");
 // const next = document.querySelector("#next");
 // const prev = document.querySelector("#prev");
-let auto = true; // Auto scroll
+let auto; // Auto scroll
 let intervalTime = 5000; // 5 seconds
 let slideInterval;
+const slider = document.querySelector(".slider");
 
 // Button events
 // next.addEventListener("click", (e) => {
@@ -15,12 +16,30 @@ let slideInterval;
 // });
 
 // prev.addEventListener("click", (e) => {
-// 	prevSlide();
-// 	if (auto) {
-// 		clearInterval(slideInterval);
-// 		slideInterval = setInterval(nextSlide, intervalTime);
-// 	}
-// });
+	// 	prevSlide();
+	// 	if (auto) {
+		// 		clearInterval(slideInterval);
+		// 		slideInterval = setInterval(nextSlide, intervalTime);
+		// 	}
+		// });
+		
+
+slider.addEventListener("click", (ele) => { 
+	auto = !auto;
+	console.log(auto)
+	if(auto) {
+		slideInterval = setInterval(nextSlide, intervalTime);
+	} else {
+		clearInterval(slideInterval);
+	}
+});
+
+// when the window is loaded run slides
+window.addEventListener("load", (ele) => {
+	console.log("window loaded")
+	auto = true;
+	slideInterval = setInterval(nextSlide, intervalTime);
+});
 
 const nextSlide = () => {
 	// Get current class
@@ -34,12 +53,6 @@ const nextSlide = () => {
 	} else {
 		// if no more siblings add current to the start
 		slides[0].classList.add("current");
-	}
-	if(auto) {
-
-		setTimeout(() => current.classList.remove("current"));
-	} else {
-		clearInterval(slideInterval)
 	}
 };
 
@@ -59,26 +72,17 @@ const nextSlide = () => {
 // 	setTimeout(() => current.classList.remove("current"));
 // };
 
-
 // Pause auto
-slides.forEach(function (e) {
-	e.addEventListener("click", (e) => {
-		auto = !auto;
-		if(auto) {
-			intervalTime = 5000;
-		} else {
+// slides.forEach(function (e) { // this will run 3 times no matter what this is where to debug to pause slides
+// 	if(this.classListllo)
+// 	this.addEventListener("click", (e) => {
+// 		if(auto) {
+// 			intervalTime = 5000;
+// 		} else {
+// 			intervalTime = 0;
+// 		}
+// 	});
+// });
 
-			intervalTime = 0
-		}
-		console.log(auto);
-	});
-});
-
-if (auto) {
-	// Run next slide at interval time
-	slideInterval = setInterval(nextSlide, intervalTime);
-} else {
-	clearInterval(slideInterval);
-}
 // Auto slide
 // setInterval(nextSlide, intervalTime);

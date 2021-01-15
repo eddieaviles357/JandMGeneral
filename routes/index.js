@@ -5,10 +5,19 @@ const router = express.Router({ mergeParams: true });
 const validator = require("../middleware/validator");
 const mailSender = require("../middleware/mailSender.js")
 
+// util functions
+const onMobile = require("../util/onMobile");
+
 module.exports = 
   router
   .get('/', (req,res) => {
     // used to render form
+    // console.log("req::headers::", req.headers)
+    // console.log("user-agent::AGENT::", req.headers["user-agent"]);
+    let isMobile = onMobile(req);
+    if(isMobile) {
+      res.render("pages/about-us");
+    }
     res.render("index");
   })
   .get('/about-us', (req, res) => {
