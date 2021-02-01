@@ -6,9 +6,9 @@
 </div>
 <section class="form--container">
   <% if(!submit) { %>
-  <p class="form--thanks">
+  <span class="form--thanks">
     Thank you for taking the time to contact us! To request your free estimate, please use the form below to give us some details about your project.
-  </p>
+  </span>
   <form class="form" action="/contact" method="POST">
     <div class="form__group">
       <input 
@@ -45,7 +45,7 @@
       class="form__textarea form__input"
       placeholder="Comment max characters 140" 
       ></textarea>
-      <label class="form__label" for="comment">Comment max characters 140</label>
+      <label class="form__label" for="comment">&nbsp;<span id="log"></span></label>
     </div>
     <div class="form__group">
       <button class="btn btn-generic" id="form-button">
@@ -57,4 +57,5 @@
     <%- include ("../partials/submitForm") -%>
     <% } %>
   </section>
+  <script src="/src/components/contact.js"></script>
 <%- include ("../partials/footer") -%>

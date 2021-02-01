@@ -168,3 +168,100 @@
 		}
 	}
 }
+
+// mobile styles ********************************************
+.m_nav__list {
+	list-style: none;
+	display: flex;
+
+	opacity: 1;
+	
+	z-index: -99999;
+	opacity: 1;
+	width: 100vw;
+	position: absolute;
+	right: 0;
+	// top: -25rem;
+	top: -1px;
+	transform: translateY(-25rem);
+	flex-direction: column;
+	align-items: center;
+
+	padding-bottom: 1rem;
+	font-size: 1.75rem;
+	letter-spacing: 0.3rem;
+	color: white;
+
+	&--item {
+		padding: 0 0.7rem;
+		border-radius: 5px;
+	}
+
+	& .nav--link {
+		opacity: 0;
+	}
+}
+
+/* makes it tabbable */
+.m_nav-toggle {
+	position: absolute !important;
+	top: -9999px !important;
+	left: -9999px !important;
+	display: flex;
+
+	&:focus ~ .m_nav-toggle-label {
+		outline: 2px solid rgba(lightblue, 0.75);
+	}
+
+	&-label {
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		margin: 2rem 0 0 0;
+		padding: 0 1rem;
+		height: 50%;
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		transform: translateX(-2rem);
+	}
+}
+// hamburger menu
+.m_nav-toggle-label span,
+.m_nav-toggle-label span::before,
+.m_nav-toggle-label span::after {
+
+	background: rgb(0, 0, 0);
+	height: 2px;
+	width: 2em;
+	border-radius: 2px;
+	position: relative;
+
+	display: block;
+}
+
+.m_nav-toggle-label span::before,
+.m_nav-toggle-label span::after {
+	content: "";
+	position: absolute;
+}
+
+.m_nav-toggle-label span::before {
+	bottom: 7px;
+}
+
+.m_nav-toggle-label span::after {
+	top: 7px;
+}
+// used for event click for hamburger
+.m_hamburger {
+	position: absolute;
+	z-index: -9999;
+	transform: translateY(3.2rem);
+	// opacity: 1;
+	background: white;
+	& .nav--link {
+		opacity: 1;
+	}
+}

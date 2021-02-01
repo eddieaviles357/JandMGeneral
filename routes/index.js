@@ -10,15 +10,11 @@ const onMobile = require("../util/onMobile");
 
 module.exports = 
   router
-  .get('/', (req,res) => {
+  .get('/', (req, res) => {
     // used to render form
     // console.log("req::headers::", req.headers)
-    // console.log("user-agent::AGENT::", req.headers["user-agent"]);
     let isMobile = onMobile(req);
-    if(isMobile) {
-      res.render("pages/about-us");
-    }
-    res.render("index");
+    isMobile ? res.render("mobile/m_index") : res.render("index");
   })
   .get('/about-us', (req, res) => {
     res.render("pages/about-us");
